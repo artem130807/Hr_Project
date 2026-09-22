@@ -1,0 +1,15 @@
+{
+  "event_id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+  "event_type": "hr.event.notify",
+  "occurred_at": "2026-08-18T12:00:00Z",
+  "hr_event_id": 55,
+  "type": "birthday",
+  "employee_name": "Иван Иванов",
+  "telegram_user": "@ivan_hr",
+  "note": "торт",
+  "event_date": "2026-05-01",
+  "remind_before": 3,
+  "notify_at": "2026-04-28T00:00:00Z",
+  "user_id": "11111111-1111-1111-1111-111111111111",
+  "content": "Тип события: День рождения\nСотрудник: Иван Иванов\nДата: 01.05.2026\nНапомнить за: 3 дн.\nTelegram сотрудника: @ivan_hr\nЗаметка: торт"
+}
