@@ -226,7 +226,7 @@ export default function VacancyFilterStepModal({
                                 data-testid="filter-run-now"
                                 onClick={handleRunFilterNow}
                                 disabled={runningFilter || saving}
-                                className="text-sm px-3 py-2 rounded-xl bg-[#cda834]/15 text-slate-800 hover:bg-[#cda834]/25 border border-[#cda834]/40 font-medium disabled:opacity-50"
+                                className="text-sm px-3 py-2 rounded-xl bg-[#4f46e5]/15 text-slate-800 hover:bg-[#4f46e5]/25 border border-[#4f46e5]/40 font-medium disabled:opacity-50"
                             >
                                 {runningFilter
                                     ? "Прогон фильтра…"
@@ -263,12 +263,12 @@ export default function VacancyFilterStepModal({
                                 }
                             }}
                             className={`pb-2.5 px-3 text-sm font-medium relative ${
-                                mode === tab.id ? "text-[#cda834]" : "text-slate-500"
+                                mode === tab.id ? "text-[#4f46e5]" : "text-slate-500"
                             }`}
                         >
                             {tab.label}
                             {mode === tab.id && (
-                                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#cda834]" />
+                                <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4f46e5]" />
                             )}
                         </button>
                     ))}
@@ -291,7 +291,7 @@ export default function VacancyFilterStepModal({
                                         onClick={() => setSelectedId(f.id)}
                                         className={`text-left px-4 py-3 rounded-xl border transition-colors ${
                                             selectedId === f.id
-                                                ? "border-[#cda834] bg-[#cda834]/10"
+                                                ? "border-[#4f46e5] bg-[#4f46e5]/10"
                                                 : "border-slate-200 hover:border-slate-300 bg-white"
                                         }`}
                                     >
@@ -480,7 +480,7 @@ function FilterFormFields({ form, setForm, formErrors, idPrefix }) {
                                 key={o.value}
                                 className={`flex items-start gap-2 rounded-xl border px-3 py-2.5 cursor-pointer ${
                                     checked
-                                        ? "border-[#cda834] bg-[#cda834]/10"
+                                        ? "border-[#4f46e5] bg-[#4f46e5]/10"
                                         : "border-slate-200 bg-slate-50"
                                 }`}
                             >
@@ -511,7 +511,7 @@ function FilterFormFields({ form, setForm, formErrors, idPrefix }) {
                     id={`${idPrefix}-city`}
                     value={form.city}
                     onChange={(e) => setForm((p) => ({ ...p, city: e.target.value }))}
-                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                     placeholder="Например, Москва"
                 />
             </Field>
@@ -525,7 +525,7 @@ function FilterFormFields({ form, setForm, formErrors, idPrefix }) {
                         max={120}
                         value={form.age_from}
                         onChange={(e) => setForm((p) => ({ ...p, age_from: e.target.value }))}
-                        className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                        className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                     />
                 </Field>
                 <Field label="Возраст до" htmlFor={`${idPrefix}-age-to`} optional>
@@ -536,7 +536,7 @@ function FilterFormFields({ form, setForm, formErrors, idPrefix }) {
                         max={120}
                         value={form.age_to}
                         onChange={(e) => setForm((p) => ({ ...p, age_to: e.target.value }))}
-                        className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                        className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                     />
                 </Field>
             </div>
@@ -549,7 +549,7 @@ function FilterFormFields({ form, setForm, formErrors, idPrefix }) {
                     id={`${idPrefix}-experience`}
                     value={form.experience}
                     onChange={(e) => setForm((p) => ({ ...p, experience: e.target.value }))}
-                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                 >
                     <option value="">Не указан</option>
                     {EXPERIENCE_OPTIONS.map((o) => (
@@ -565,7 +565,7 @@ function FilterFormFields({ form, setForm, formErrors, idPrefix }) {
                     id={`${idPrefix}-work-format`}
                     value={form.work_format}
                     onChange={(e) => setForm((p) => ({ ...p, work_format: e.target.value }))}
-                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                    className="w-full border border-slate-200 rounded-xl px-3 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                 >
                     <option value="">Не указан</option>
                     {WORK_FORMAT_OPTIONS.map((o) => (

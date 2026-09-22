@@ -102,7 +102,7 @@ export default function ApprovalsSection({ candidateId, vacancyId, onApproved })
                     type="button"
                     disabled={saving}
                     onClick={handleSubmit}
-                    className="bg-[#e0bb48] text-black px-4 py-2 rounded-xl text-sm font-medium disabled:opacity-50"
+                    className="bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm font-medium disabled:opacity-50"
                 >
                     {saving ? "..." : "Согласовать"}
                 </button>

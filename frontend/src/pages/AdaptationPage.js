@@ -408,7 +408,7 @@ export default function AdaptationPage() {
                     </span>
                 </div>
                 <div className="flex items-center gap-3">
-                    <span className="text-2xl font-bold text-[#cda834]">{attention.this_week}</span>
+                    <span className="text-2xl font-bold text-[#4f46e5]">{attention.this_week}</span>
                     <span>
                         <b className="block text-sm">На этой неделе</b>
                         <small className="text-slate-500">требуют внимания</small>

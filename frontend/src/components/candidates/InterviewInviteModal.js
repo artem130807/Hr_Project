@@ -197,7 +197,7 @@ export default function InterviewInviteModal({
                         </span>
                         <textarea
                             ref={textareaRef}
-                            className="w-full min-h-[120px] max-h-48 border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#cda834]/40 focus:border-[#cda834]"
+                            className="w-full min-h-[120px] max-h-48 border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40 focus:border-[#4f46e5]"
                             value={text}
                             onChange={(e) => {
                                 setDirty(true);

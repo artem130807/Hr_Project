@@ -22,7 +22,7 @@ function formatWhen(iso) {
 function speakerMeta(speaker) {
     if (speaker === "hr") return { name: "HR", bubble: "bg-white border-slate-200 text-slate-800", align: "items-start" };
     if (speaker === "system") return { name: "Система", bubble: "bg-slate-100 border-slate-200 text-slate-500 italic", align: "items-center" };
-    return { name: "Собеседник", bubble: "bg-[#cda834]/10 border-[#cda834]/20 text-slate-900", align: "items-end" };
+    return { name: "Собеседник", bubble: "bg-[#4f46e5]/10 border-[#4f46e5]/20 text-slate-900", align: "items-end" };
 }
 
 function highlightText(text, query) {
@@ -40,7 +40,7 @@ function highlightText(text, query) {
         }
         if (at > i) parts.push(text.slice(i, at));
         parts.push(
-            <mark key={`${at}-${i}`} className="bg-[#cda834]/40 text-slate-900 rounded px-0.5">
+            <mark key={`${at}-${i}`} className="bg-[#4f46e5]/40 text-slate-900 rounded px-0.5">
                 {text.slice(at, at + q.length)}
             </mark>
         );
@@ -148,7 +148,7 @@ export default function CallsPage() {
                         value={phoneQuery}
                         onChange={(e) => setPhoneQuery(e.target.value)}
                         data-testid="calls-phone-search"
-                        className="w-full h-12 pl-12 pr-28 rounded-2xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#cda834]/40 focus:border-[#cda834]"
+                        className="w-full h-12 pl-12 pr-28 rounded-2xl border border-slate-200 bg-white text-slate-900 placeholder:text-slate-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40 focus:border-[#4f46e5]"
                     />
                     <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] text-slate-400">
                         {phoneReady ? "точное совпадение" : "от 4 цифр"}
@@ -216,7 +216,7 @@ export default function CallsPage() {
                                         }}
                                         data-testid={`call-row-${call.id}`}
                                         className={`w-full text-left px-4 py-3.5 border-b border-slate-100 transition-colors ${
-                                            active ? "bg-[#cda834]/10" : "hover:bg-slate-50"
+                                            active ? "bg-[#4f46e5]/10" : "hover:bg-slate-50"
                                         }`}
                                     >
                                         <div className="flex items-start justify-between gap-2">
@@ -292,7 +292,7 @@ export default function CallsPage() {
                                     placeholder="Найти в расшифровке…"
                                     value={inTranscript}
                                     onChange={(e) => setInTranscript(e.target.value)}
-                                    className="w-full h-10 px-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#cda834]/40 focus:bg-white"
+                                    className="w-full h-10 px-3 rounded-xl border border-slate-200 bg-slate-50 text-sm text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40 focus:bg-white"
                                 />
                             </div>
                             <div className="flex-1 overflow-y-auto px-5 py-4 space-y-3" data-testid="call-transcript">

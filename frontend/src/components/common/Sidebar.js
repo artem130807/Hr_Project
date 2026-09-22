@@ -90,10 +90,11 @@ export default function Sidebar() {
     };
 
     return (
-        <div className="w-64 h-screen bg-white text-slate-700 border-r border-slate-200 flex flex-col shadow-sm flex-shrink-0 relative z-20">
-            <div className="p-6 pb-4 flex justify-center">
-                <NavLink to={homePath} className="block hover:opacity-90 transition-opacity">
-                    <img src="/icons/alt_logo.png" alt="site-logo" className="w-[100px] object-contain"/>
+        <aside className="w-[260px] shrink-0 h-screen sticky top-0 bg-[#0f172a] text-slate-300 flex flex-col z-20">
+            <div className="px-5 pt-6 pb-4">
+                <NavLink to={homePath} className="block rounded-xl px-1 py-1 hover:bg-white/5 transition-colors">
+                    <span className="block text-[11px] uppercase tracking-[0.18em] text-indigo-300">Подбор</span>
+                    <span className="block text-[20px] font-semibold tracking-tight text-white leading-tight">Hr платформа</span>
                 </NavLink>
             </div>
             
@@ -108,7 +109,7 @@ export default function Sidebar() {
                                     <button
                                         type="button"
                                         onClick={() => toggleGroup(item.label)}
-                                        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-600 hover:bg-slate-50 hover:text-slate-900 transition-all"
+                                        className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-slate-300 hover:bg-white/5 hover:text-white transition-all"
                                         data-testid={`nav-group-${item.label}`}
                                     >
                                         <Icon className="w-5 h-5 opacity-80" />
@@ -123,7 +124,7 @@ export default function Sidebar() {
                                         </svg>
                                     </button>
                                     {opened && (
-                                        <div className="ml-3 pl-3 border-l border-slate-100 space-y-0.5">
+                                        <div className="ml-3 pl-3 border-l border-white/10 space-y-0.5">
                                             {item.children.map((child) => (
                                                 <NavLink
                                                     to={child.to}
@@ -132,8 +133,8 @@ export default function Sidebar() {
                                                     className={({isActive}) =>
                                                         `flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-all ${
                                                             isActive
-                                                                ? "bg-yellow-50 text-yellow-800 font-semibold"
-                                                                : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+                                                                ? "bg-indigo-500/20 text-white font-semibold"
+                                                                : "text-slate-400 hover:bg-white/5 hover:text-white"
                                                         }`
                                                     }
                                                 >
@@ -152,8 +153,8 @@ export default function Sidebar() {
                                 className={({isActive}) => 
                                     `flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 ${
                                         isActive 
-                                        ? "bg-yellow-50 text-yellow-800 font-semibold shadow-sm border border-yellow-100/50" 
-                                        : "hover:bg-slate-50 text-slate-600 hover:text-slate-900"
+                                        ? "bg-white text-[#0f172a] font-semibold shadow-sm" 
+                                        : "hover:bg-white/5 text-slate-300 hover:text-white"
                                     }`
                                 }
                             >
@@ -170,14 +171,14 @@ export default function Sidebar() {
                         <button
                             onClick={handleTelegramLink}
                             disabled={loading}
-                            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 text-slate-700 rounded-xl hover:bg-slate-200 disabled:opacity-50 text-sm font-medium transition-colors"
+                            className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-white/10 text-white rounded-xl hover:bg-white/15 disabled:opacity-50 text-sm font-medium transition-colors"
                         >
                             {loading ? "Загрузка..." : "Telegram Бот"}
                         </button>
                         )}
 
                         {hhAuthPassed === null ? (
-                            <div className="px-4 py-2 bg-slate-100 text-slate-500 rounded-xl text-sm text-center border border-slate-200">
+                            <div className="px-4 py-2 bg-white/5 text-slate-400 rounded-xl text-sm text-center border border-white/10">
                                 Проверка HH.ru...
                             </div>
                         ) : hhAuthPassed ? (
@@ -187,7 +188,7 @@ export default function Sidebar() {
                         ) : (
                             <button
                                 onClick={handleHHAuthClick}
-                                className="w-full px-4 py-2.5 bg-[#e0bb48] text-black rounded-xl hover:bg-[#d4af3a] shadow-sm text-sm font-medium transition-colors"
+                                className="w-full px-4 py-2.5 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 shadow-sm text-sm font-medium transition-colors"
                             >
                                 Войти на HH.ru
                             </button>
@@ -202,20 +203,20 @@ export default function Sidebar() {
                 )}
             </div>
 
-            <div className="p-4 border-t border-slate-100 bg-slate-50">
+            <div className="p-4 border-t border-white/10 bg-black/20">
                 <div 
                     onClick={() => window.location.href = '/profile'}
-                    className="flex items-center gap-3 px-2 mb-4 cursor-pointer hover:bg-slate-200/50 p-2 rounded-xl transition-colors group"
+                    className="flex items-center gap-3 px-2 mb-4 cursor-pointer hover:bg-white/5 p-2 rounded-xl transition-colors group"
                     title="Перейти в профиль"
                 >
-                    <div className="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 font-bold text-sm border-2 border-white shadow-sm group-hover:scale-105 transition-transform shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center text-white font-semibold text-sm shrink-0">
                         {user.name ? user.name.charAt(0).toUpperCase() : "U"}
                     </div>
                     <div className="flex-1 overflow-hidden">
-                        <div className="text-sm font-bold text-slate-800 truncate leading-tight group-hover:text-slate-900 transition-colors">
+                        <div className="text-sm font-semibold text-white truncate leading-tight">
                             {user.name || user.username || "Пользователь"}
                         </div>
-                        <div className="text-xs font-medium text-slate-500 uppercase tracking-wider mt-0.5 truncate">
+                        <div className="text-xs font-medium text-slate-400 mt-0.5 truncate">
                             {user.role} {user.department ? `· ${user.department}` : ""}
                         </div>
                     </div>
@@ -223,7 +224,7 @@ export default function Sidebar() {
                 <button
                     type="button"
                     onClick={logout}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2 text-slate-600 rounded-xl hover:bg-red-50 hover:text-red-600 text-sm font-medium transition-colors"
+                    className="w-full flex items-center justify-center gap-2 px-4 py-2 text-slate-300 rounded-xl hover:bg-rose-500/15 hover:text-rose-200 text-sm font-medium transition-colors"
                 >
                     <Icons.LogOutIcon className="w-4 h-4" />
                     Выйти
@@ -234,7 +235,7 @@ export default function Sidebar() {
                 <div className="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-[100] p-4">
                     <div className="bg-white rounded-2xl p-8 max-w-md mx-auto shadow-2xl">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 rounded-full bg-yellow-100 flex items-center justify-center text-yellow-600">
+                            <div className="w-10 h-10 rounded-full bg-indigo-50 flex items-center justify-center text-indigo-600">
                                 <Icons.BanIcon className="w-5 h-5"/>
                             </div>
                             <h3 className="text-xl font-bold text-slate-900">Важно!</h3>
@@ -252,7 +253,7 @@ export default function Sidebar() {
                             <button
                                 onClick={handleHHAuth}
                                 disabled={loading}
-                                className="px-5 py-2.5 bg-[#e0bb48] text-black rounded-xl hover:bg-[#d4af3a] font-medium shadow-sm transition-colors disabled:opacity-50"
+                                className="px-5 py-2.5 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 font-medium shadow-sm transition-colors disabled:opacity-50"
                             >
                                 {loading ? "Переход..." : "Понятно, войти"}
                             </button>
@@ -260,6 +261,6 @@ export default function Sidebar() {
                     </div>
                 </div>
             )}
-        </div>
+        </aside>
     );
 }

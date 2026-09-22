@@ -145,7 +145,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={formData.full_name}
                             onChange={e => handleChange("full_name", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Иванов Иван Иванович"
                         />
                     </div>
@@ -157,7 +157,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 type="date"
                                 value={formData.birth_date}
                                 onChange={e => handleChange("birth_date", e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             />
                         </div>
 
@@ -167,7 +167,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 type="number"
                                 value={formData.age || ""}
                                 onChange={e => handleChange("age", e.target.value ? parseInt(e.target.value) : null)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                 min="18"
                                 placeholder="Например, 30"
                             />
@@ -181,7 +181,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 type="tel"
                                 value={formData.phone_number}
                                 onChange={e => handleChange("phone_number", e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                 placeholder="+79991234567"
                                 maxLength="12"
                             />
@@ -193,7 +193,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 type="text"
                                 value={formData.telegram_username}
                                 onChange={e => handleChange("telegram_username", e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                 placeholder="@username"
                                 maxLength="64"
                             />
@@ -207,7 +207,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 type="email"
                                 value={formData.email}
                                 onChange={e => handleChange("email", e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                 placeholder="name@example.com"
                                 maxLength="254"
                             />
@@ -218,7 +218,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 <select
                                     value={formData.gender}
                                     onChange={e => handleChange("gender", e.target.value)}
-                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                                 >
                                     {GENDERS.map(gender => (
                                         <option key={gender} value={gender}>{gender}</option>
@@ -237,7 +237,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             <select
                                 value={formData.marital_status}
                                 onChange={e => handleChange("marital_status", e.target.value)}
-                                className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                             >
                                 {MARITAL_STATUS_OPTIONS.map(status => (
                                     <option key={status} value={status}>{status}</option>
@@ -260,7 +260,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 <select
                                     value={formData.status}
                                     onChange={e => handleChange("status", e.target.value)}
-                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                                     required
                                 >
                                     {statuses.map(status => (
@@ -279,7 +279,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 <select
                                     value={formData.stage}
                                     onChange={e => handleChange("stage", e.target.value)}
-                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                                     required
                                 >
                                     {STAGES.map(stage => (
@@ -314,7 +314,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 <select
                                     value={formData.total_work_expirience}
                                     onChange={e => handleChange("total_work_expirience", e.target.value)}
-                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                                 >
                                     {WORK_EXPERIENCE.map(exp => (
                                         <option key={exp} value={exp}>{exp}</option>
@@ -332,7 +332,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 type="number"
                                 value={formData.average_service_length || ""}
                                 onChange={e => handleChange("average_service_length", e.target.value ? parseFloat(e.target.value) : null)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                 step="0.1"
                                 placeholder="Например, 1.5"
                             />
@@ -345,7 +345,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={formData.relevant_position_expirience}
                             onChange={e => handleChange("relevant_position_expirience", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Опишите релевантный опыт..."
                         />
                     </div>
@@ -356,7 +356,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={formData.certain_position_expirience}
                             onChange={e => handleChange("certain_position_expirience", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Опишите конкретный опыт..."
                         />
                     </div>
@@ -367,7 +367,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={Array.isArray(formData.other_work_expirience) ? formData.other_work_expirience.join(", ") : formData.other_work_expirience}
                             onChange={e => handleArrayChange("other_work_expirience", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Смежные сферы..."
                         />
                     </div>
@@ -378,7 +378,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={Array.isArray(formData.education) ? formData.education.join(", ") : formData.education}
                             onChange={e => handleArrayChange("education", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="МГУ им. Ломоносова (Магистр), Курсы повышения квалификации..."
                         />
                     </div>
@@ -393,7 +393,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={Array.isArray(formData.hard_skills) ? formData.hard_skills.join(", ") : formData.hard_skills}
                             onChange={e => handleArrayChange("hard_skills", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Python, SQL, Docker..."
                         />
                     </div>
@@ -404,7 +404,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={Array.isArray(formData.languages) ? formData.languages.join(", ") : formData.languages}
                             onChange={e => handleArrayChange("languages", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Английский (B2), Немецкий (A1)..."
                         />
                     </div>
@@ -415,7 +415,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={Array.isArray(formData.work_programs) ? formData.work_programs.join(", ") : formData.work_programs}
                             onChange={e => handleArrayChange("work_programs", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Excel, 1C, Jira..."
                         />
                     </div>
@@ -431,7 +431,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 type="number"
                                 value={formData.salary_expectations || ""}
                                 onChange={e => handleChange("salary_expectations", e.target.value ? parseInt(e.target.value) : null)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                 min="0"
                                 placeholder="Например, 120000"
                             />
@@ -443,7 +443,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                                 <select
                                     value={formData.resume_update_date}
                                     onChange={e => handleChange("resume_update_date", e.target.value)}
-                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                                 >
                                     {UPDATE_DATES.map(date => (
                                         <option key={date} value={date}>{date}</option>
@@ -461,7 +461,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="checkbox"
                             checked={formData.active_search}
                             onChange={e => handleChange("active_search", e.target.checked)}
-                            className="w-5 h-5 text-[#cda834] bg-white border-slate-300 rounded focus:ring-[#cda834] focus:ring-2 cursor-pointer"
+                            className="w-5 h-5 text-[#4f46e5] bg-white border-slate-300 rounded focus:ring-[#4f46e5] focus:ring-2 cursor-pointer"
                         />
                         <span className="text-sm font-semibold text-slate-700 select-none">В активном поиске</span>
                     </label>
@@ -474,7 +474,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="datetime-local"
                             value={formData.next_contact_at}
                             onChange={e => handleChange("next_contact_at", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50"
                         />
                         <p className="mt-1 text-xs text-slate-500">
                             Ответственным будет назначен текущий пользователь. Очистите поле, чтобы снять напоминание.
@@ -490,7 +490,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="text"
                             value={Array.isArray(formData.hobbies) ? formData.hobbies.join(", ") : formData.hobbies}
                             onChange={e => handleChange("hobbies", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="Футбол, Чтение, Музыка"
                         />
                     </div>
@@ -500,7 +500,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                         <textarea
                             value={Array.isArray(formData.personal_characteristics) ? formData.personal_characteristics.join(", ") : formData.personal_characteristics}
                             onChange={e => handleChange("personal_characteristics", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[80px]"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[80px]"
                             placeholder="Ответственность, коммуникабельность..."
                         />
                     </div>
@@ -511,7 +511,7 @@ export default function CandidateForm({ initialData, onClose, onCandidateAdded }
                             type="url"
                             value={formData.hh_resume_link}
                             onChange={e => handleChange("hh_resume_link", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             placeholder="https://hh.ru/resume/..."
                         />
                     </div>

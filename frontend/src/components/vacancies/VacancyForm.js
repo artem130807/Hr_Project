@@ -811,7 +811,7 @@ export default function VacancyForm({ initialData, onClose, onVacancyAdded }) {
                     type="button"
                     onClick={handlePublishToHH}
                     disabled={publishing || generatingFull}
-                    className="bg-[#e0bb48] text-black px-6 py-2 rounded-xl hover:bg-[#d4af3a] disabled:opacity-50 shadow-sm"
+                    className="bg-indigo-600 text-white px-6 py-2 rounded-xl hover:bg-indigo-700 disabled:opacity-50 shadow-sm"
                 >
                     {publishing ? "Публикация..." : (hhUrl || initialData?.hh_vacancy_id ? "Обновить на HH.ru" : "Опубликовать на HH.ru")}
                 </button>

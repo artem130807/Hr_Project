@@ -338,7 +338,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                             if (type !== "interview") setInterviewHrPicked(false);
                             if (!eventTypeRequiresEmployeeName(type)) nameSearch.clear();
                         }}
-                        className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                        className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                     >
                         {EVENT_TYPE_OPTIONS.map((item) => (
                             <option key={item.value} value={item.value}>
@@ -366,7 +366,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                     onFocus={nameSearch.openIfAny}
                     onBlur={nameSearch.scheduleClose}
                     autoComplete="off"
-                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                 />
                 <SuggestionDropdown
                     visible={nameSearch.showSuggestions && form.employee_name.trim().length >= 2}
@@ -390,7 +390,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                         placeholder="Поиск по ФИО"
                         value={form.candidate_search}
                         onChange={(e) => setForm({ ...form, candidate_search: e.target.value })}
-                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all mb-2"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all mb-2"
                         data-testid="event-candidate-search"
                     />
                     <select
@@ -404,7 +404,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                                 candidate_name: picked?.full_name || prev.candidate_name,
                             }));
                         }}
-                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                         data-testid="event-candidate-select"
                     >
                         <option value="">
@@ -427,7 +427,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                         placeholder="Название вакансии"
                         value={form.vacancy_name}
                         onChange={(e) => setForm({ ...form, vacancy_name: e.target.value })}
-                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                     />
                 </div>
             )}
@@ -440,7 +440,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                         placeholder="Имя ребёнка" 
                         value={form.child_name} 
                         onChange={(e) => setForm({ ...form, child_name: e.target.value })}
-                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                     />
                 </div>
             )}
@@ -454,7 +454,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                         type="time"
                         value={form.interview_time}
                         onChange={(e) => setForm({ ...form, interview_time: e.target.value })}
-                        className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                        className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                     />
                 </div>
             )}
@@ -465,7 +465,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                     type="date" 
                     value={form.event_date} 
                     onChange={(e) => setForm({ ...form, event_date: e.target.value })}
-                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                 />
             </div>
 
@@ -479,7 +479,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                             max={365}
                             value={form.repeat_interval_count}
                             onChange={(e) => setForm({ ...form, repeat_interval_count: e.target.value })}
-                            className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             data-testid="event-repeat-count"
                         />
                     </div>
@@ -488,7 +488,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                         <select
                             value={form.repeat_interval_unit}
                             onChange={(e) => setForm({ ...form, repeat_interval_unit: e.target.value })}
-                            className="w-full h-[42px] appearance-none border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full h-[42px] appearance-none border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             data-testid="event-repeat-unit"
                         >
                             {REPEAT_INTERVAL_OPTIONS.map((item) => (
@@ -508,7 +508,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                     placeholder="Дней" 
                     value={form.remind_before} 
                     onChange={(e) => setForm({ ...form, remind_before: e.target.value })}
-                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                 />
             </div>
 
@@ -520,7 +520,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                     type="time"
                     value={form.remind_at_time}
                     onChange={(e) => setForm({ ...form, remind_at_time: e.target.value })}
-                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                 />
             </div>
 
@@ -538,7 +538,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                     onFocus={tgSearch.openIfAny}
                     onBlur={tgSearch.scheduleClose}
                     autoComplete="off"
-                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                    className="w-full h-[42px] border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                 />
                 <SuggestionDropdown
                     visible={
@@ -561,7 +561,7 @@ const EventNotificationSetup = ({ onRefresh }) => {
                     value={form.note}
                     onChange={(e) => setForm({ ...form, note: e.target.value })}
                     rows={3}
-                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all resize-y"
+                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all resize-y"
                 />
             </div>
 

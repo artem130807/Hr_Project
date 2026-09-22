@@ -94,7 +94,7 @@ export function buildCandidateInterviewReminderText({
     return [
         `${greeting}, здравствуйте!`,
         "",
-        "Напоминаем о собеседовании в ALT.",
+        "Напоминаем о собеседовании.",
         `Дата и время: ${when}`,
         `Формат: ${formatLabel}`,
         "",

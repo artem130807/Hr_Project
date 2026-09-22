@@ -167,13 +167,13 @@ export default function VacanciesPage() {
                     onClick={() => setTab("local")}
                     className={`pb-3 px-2 text-sm font-medium transition-colors relative ${
                         tab === "local"
-                            ? "text-[#cda834]"
+                            ? "text-[#4f46e5]"
                             : "text-slate-500 hover:text-slate-800"
                     }`}
                 >
                     В платформе
                     {tab === "local" && (
-                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#cda834] rounded-t-full" />
+                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4f46e5] rounded-t-full" />
                     )}
                 </button>
                 <button
@@ -181,13 +181,13 @@ export default function VacanciesPage() {
                     onClick={() => setTab("hh")}
                     className={`pb-3 px-2 text-sm font-medium transition-colors relative ${
                         tab === "hh"
-                            ? "text-[#cda834]"
+                            ? "text-[#4f46e5]"
                             : "text-slate-500 hover:text-slate-800"
                     }`}
                 >
                     С HH.ru
                     {tab === "hh" && (
-                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#cda834] rounded-t-full" />
+                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4f46e5] rounded-t-full" />
                     )}
                 </button>
             </div>

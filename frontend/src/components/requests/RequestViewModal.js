@@ -297,7 +297,7 @@ export default function RequestViewModal({
                   {request.linked_vacancy_id ? (
                     <a
                       href={`/vacancies`}
-                      className="text-[#cda834] hover:underline font-medium"
+                      className="text-[#4f46e5] hover:underline font-medium"
                       onClick={(e) => {
                         e.preventDefault();
                         window.location.assign(`/vacancies`);
@@ -342,7 +342,7 @@ export default function RequestViewModal({
                   type="button"
                   onClick={() => onPublishHH(request.id)}
                   disabled={isPublishingHH}
-                  className="px-4 py-2 text-sm bg-[#e0bb48] text-black rounded-lg hover:bg-[#d4af3a] disabled:opacity-50 font-medium"
+                  className="px-4 py-2 text-sm bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 font-medium"
                 >
                   {isPublishingHH ? "Публикация..." : "Опубликовать на HH.ru"}
                 </button>

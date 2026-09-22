@@ -91,7 +91,7 @@ export default function T2AtsConnectPanel() {
                         type="button"
                         onClick={() => setOpen((v) => !v)}
                         data-testid="t2-ats-toggle"
-                        className="h-9 px-3 rounded-xl bg-[#cda834] text-sm font-semibold text-white hover:opacity-90"
+                        className="h-9 px-3 rounded-xl bg-[#4f46e5] text-sm font-semibold text-white hover:opacity-90"
                     >
                         {connected ? "Заменить токены" : "Вставить токены"}
                     </button>

@@ -290,7 +290,7 @@ export default function RequestsPage() {
                         <select
                             value={statusFilter}
                             onChange={(e) => setStatusFilter(e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all appearance-none cursor-pointer"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all appearance-none cursor-pointer"
                         >
                             <option value="">Все статусы</option>
                             {Object.entries(HIRING_REQUEST_STATUS).map(([key, label]) => (
@@ -308,7 +308,7 @@ export default function RequestsPage() {
                             <select
                                 value={departmentFilter}
                                 onChange={(e) => setDepartmentFilter(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all appearance-none cursor-pointer"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all appearance-none cursor-pointer"
                             >
                                 <option value="">Все отделы</option>
                                 {DEPARTMENTS.map((dept) => (
@@ -428,7 +428,7 @@ export default function RequestsPage() {
                             </div>
 
                             <div className="pt-4 border-t border-slate-100 flex justify-end items-center">
-                                <span className="text-sm font-medium text-[#cda834] flex items-center gap-1 group-hover:text-[#b8952b] transition-colors">
+                                <span className="text-sm font-medium text-[#4f46e5] flex items-center gap-1 group-hover:text-[#b8952b] transition-colors">
                                     Подробнее
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 </span>

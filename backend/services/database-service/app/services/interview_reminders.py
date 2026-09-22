@@ -46,7 +46,7 @@ def build_candidate_reminder_message(
     when = _format_when(interview_date, interview_time)
     return (
         f"{greeting}, здравствуйте!\n\n"
-        "Напоминаем о собеседовании в ALT.\n"
+        "Напоминаем о собеседовании.\n"
         f"Дата и время: {when}\n\n"
         "Пожалуйста, подтвердите участие ответом на это сообщение. "
         "Если планы изменились — тоже напишите нам сюда."

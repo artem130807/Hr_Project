@@ -315,7 +315,7 @@ export default function CandidateList({
                         {commentEditId === candidate.id ? (
                             <div className="pl-16 mb-4 no-click-open">
                                 <textarea
-                                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all resize-none mb-2"
+                                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all resize-none mb-2"
                                     rows="2"
                                     value={commentText}
                                     onChange={(e) => setCommentText(e.target.value)}
@@ -333,7 +333,7 @@ export default function CandidateList({
                                         type="button"
                                         onClick={() => handleCommentSave(candidate.id)}
                                         disabled={commentSaving}
-                                        className="px-3 py-1.5 text-xs font-medium text-black bg-[#e0bb48] hover:bg-[#d4af3a] rounded-lg transition-colors shadow-sm disabled:opacity-50"
+                                        className="px-3 py-1.5 text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm disabled:opacity-50"
                                     >
                                         {commentSaving ? "..." : "Сохранить"}
                                     </button>

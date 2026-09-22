@@ -182,7 +182,7 @@ export default function CandidateDetails({ candidate, onChange, isArchiveView = 
                             type="button"
                             onClick={() => setOfferModal(true)}
                             disabled={candidate.offer_sent === true}
-                            className="px-3.5 py-2 rounded-xl bg-[#e0bb48] text-slate-900 text-sm font-semibold hover:bg-[#d4af3a] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                            className="px-3.5 py-2 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                         >
                             {candidate.offer_sent ? "Оффер отправлен" : "Направить оффер"}
                         </button>
@@ -226,7 +226,7 @@ export default function CandidateDetails({ candidate, onChange, isArchiveView = 
                             <select
                                 value={selectedVacancyId}
                                 onChange={(e) => setSelectedVacancyId(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                                className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                             >
                                 <option value="">Выберите вакансию</option>
                                 {vacancies.map((vacancy) => (

@@ -41,7 +41,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={softSkills}
                                 onChange={(e) => setSoftSkills(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: коммуникабельность, умение работать в команде, стрессоустойчивость"
                             />
                         </div>
@@ -51,7 +51,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={values}
                                 onChange={(e) => setValues(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: честность, открытость, стремление к развитию"
                             />
                         </div>
@@ -61,7 +61,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={redFlags}
                                 onChange={(e) => setRedFlags(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: частая смена работы, конфликтность, безответственность"
                             />
                         </div>
@@ -71,7 +71,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={commonRequirements}
                                 onChange={(e) => setCommonRequirements(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: готовность к командировкам, наличие автомобиля"
                             />
                         </div>
@@ -83,7 +83,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={hardSkills}
                                 onChange={(e) => setHardSkills(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: Python, SQL, Docker, Excel"
                             />
                         </div>
@@ -93,7 +93,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={experience}
                                 onChange={(e) => setExperience(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: 2 года работы Python-разработчиком"
                             />
                         </div>
@@ -103,7 +103,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={commonRequirements}
                                 onChange={(e) => setCommonRequirements(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: готовность к командировкам, знание английского"
                             />
                         </div>
@@ -113,7 +113,7 @@ export default function PortraitForm({onSave, initialData, isCompany}) {
                             <textarea
                                 value={specifics}
                                 onChange={(e) => setSpecifics(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px]"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-3 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px]"
                                 placeholder="Например: ночные смены, разъездной характер работы"
                             />
                         </div>

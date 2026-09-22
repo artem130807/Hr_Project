@@ -44,7 +44,7 @@ export default function OfferModal({ open, defaultText = "", onClose, onSubmit }
                     </label>
                     <textarea
                         ref={textareaRef}
-                        className="w-full min-h-[180px] border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#cda834]/40 focus:border-[#cda834]"
+                        className="w-full min-h-[180px] border border-slate-200 rounded-xl px-3 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40 focus:border-[#4f46e5]"
                         value={text}
                         onChange={(e) => setText(e.target.value)}
                         placeholder="Введите текст оффера…"
@@ -64,7 +64,7 @@ export default function OfferModal({ open, defaultText = "", onClose, onSubmit }
                         </button>
                         <button
                             type="button"
-                            className="px-4 py-2 rounded-xl bg-[#e0bb48] text-slate-900 hover:bg-[#d4af3a] text-sm font-semibold disabled:opacity-60"
+                            className="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm font-semibold disabled:opacity-60"
                             onClick={handleSubmit}
                             disabled={loading || !text.trim()}
                         >

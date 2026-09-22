@@ -26,7 +26,7 @@ export default function FunnelChart({ data }) {
                     />
                     <YAxis allowDecimals={false} />
                     <Tooltip />
-                    <Bar dataKey="count" fill="#cda834" name="Кандидаты" />
+                    <Bar dataKey="count" fill="#4f46e5" name="Кандидаты" />
                 </BarChart>
             </ResponsiveContainer>
         </div>

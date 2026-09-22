@@ -258,7 +258,7 @@ export default function CandidateTimeline({ candidateId, vacancyId, refreshKey, 
                                 type="button"
                                 disabled={savingApproval}
                                 onClick={handleApprove}
-                                className="mt-2 bg-[#e0bb48] text-black px-4 py-2 rounded-xl text-sm font-medium disabled:opacity-50"
+                                className="mt-2 bg-indigo-600 text-white px-4 py-2 rounded-xl text-sm font-medium disabled:opacity-50"
                             >
                                 {savingApproval ? "Сохранение…" : "Зафиксировать согласование"}
                             </button>

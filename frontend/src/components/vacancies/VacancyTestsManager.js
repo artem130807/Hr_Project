@@ -176,7 +176,7 @@ export default function VacancyTestsManager({ vacancyId, vacancyName, onClose })
                                     key={id}
                                     className={`flex items-start gap-3 px-4 py-3 rounded-xl border cursor-pointer transition-colors ${
                                         checked
-                                            ? "border-[#cda834] bg-[#cda834]/10"
+                                            ? "border-[#4f46e5] bg-[#4f46e5]/10"
                                             : "border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50"
                                     }`}
                                     data-testid={`vacancy-test-option-${id}`}
@@ -185,7 +185,7 @@ export default function VacancyTestsManager({ vacancyId, vacancyName, onClose })
                                         type="checkbox"
                                         checked={checked}
                                         onChange={() => handleToggle(id)}
-                                        className="mt-1 w-4 h-4 text-[#cda834] border-slate-300 rounded focus:ring-[#cda834]"
+                                        className="mt-1 w-4 h-4 text-[#4f46e5] border-slate-300 rounded focus:ring-[#4f46e5]"
                                     />
                                     <div className="flex-1 min-w-0">
                                         <div className="font-medium text-slate-900 text-sm">

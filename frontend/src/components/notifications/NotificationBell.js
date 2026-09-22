@@ -177,7 +177,7 @@ export default function NotificationBell() {
                                 n.closePanel();
                                 navigate("/notifications");
                             }}
-                            className="w-full px-3 py-2 text-sm font-semibold text-yellow-800 hover:bg-yellow-50 rounded-xl transition-colors"
+                            className="w-full px-3 py-2 text-sm font-semibold text-indigo-700 hover:bg-indigo-50 rounded-xl transition-colors"
                         >
                             Все уведомления
                         </button>

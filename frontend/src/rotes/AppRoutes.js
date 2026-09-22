@@ -40,10 +40,10 @@ function NotFound() {
     const { user } = useAuth();
     const home = defaultPathForRole(user?.role);
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-yellow-50 p-6">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-[#eef2ff] p-6">
             <h1 className="text-3xl font-bold mb-2">404</h1>
             <p className="text-gray-600 mb-4">Страница не найдена</p>
-            <Link to={home} className="px-4 py-2 bg-[#e0bb48] text-black rounded font-medium">
+            <Link to={home} className="px-4 py-2 bg-indigo-600 text-white rounded font-medium">
                 На главную
             </Link>
         </div>

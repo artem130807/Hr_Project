@@ -100,7 +100,7 @@ export default function AnalyticsPage() {
                                 key={row.name}
                                 className={`rounded-xl border px-4 py-3 ${
                                     row.count > 0
-                                        ? "bg-[#cda834]/10 border-[#cda834]/30"
+                                        ? "bg-[#4f46e5]/10 border-[#4f46e5]/30"
                                         : "bg-slate-50 border-slate-100"
                                 }`}
                                 style={{ marginLeft: Math.min(row.depth, 3) * 8 }}

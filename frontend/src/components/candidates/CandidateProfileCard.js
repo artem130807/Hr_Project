@@ -58,7 +58,7 @@ export function Chip({ children, tone = "slate" }) {
         sky: "bg-sky-50 text-sky-800",
         violet: "bg-violet-50 text-violet-800",
         emerald: "bg-emerald-50 text-emerald-800",
-        amber: "bg-[#cda834]/15 text-slate-800",
+        amber: "bg-[#4f46e5]/15 text-slate-800",
     };
     return (
         <span className={`inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-medium ${tones[tone] || tones.slate}`}>
@@ -111,7 +111,7 @@ export default function CandidateProfileCard({
                             className="w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-2xl ring-1 ring-slate-200/80 shadow-sm shrink-0"
                         />
                     ) : (
-                        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#cda834]/20 text-slate-800 flex items-center justify-center text-2xl font-bold shrink-0 ring-1 ring-[#cda834]/30">
+                        <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-[#4f46e5]/20 text-slate-800 flex items-center justify-center text-2xl font-bold shrink-0 ring-1 ring-[#4f46e5]/30">
                             {initials(candidate.full_name)}
                         </div>
                     )}
@@ -221,7 +221,7 @@ export default function CandidateProfileCard({
                         </div>
                         <div className="mt-3 h-2 rounded-full bg-slate-100 overflow-hidden">
                             <div
-                                className="h-full rounded-full bg-[#cda834] transition-all"
+                                className="h-full rounded-full bg-[#4f46e5] transition-all"
                                 style={{ width: `${hasAiScore ? Math.min(100, Math.max(0, Number(aiScore))) : 0}%` }}
                             />
                         </div>
@@ -290,7 +290,7 @@ export default function CandidateProfileCard({
                 <Section title="Образование">
                     <ul className="space-y-2">
                         {education.map((item, i) => (
-                            <li key={i} className="text-sm text-slate-800 pl-3 border-l-2 border-[#cda834]/60">
+                            <li key={i} className="text-sm text-slate-800 pl-3 border-l-2 border-[#4f46e5]/60">
                                 {item}
                             </li>
                         ))}

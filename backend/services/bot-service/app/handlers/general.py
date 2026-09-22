@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from aiogram.types import Message, CallbackQuery, InputMediaPhoto, FSInputFile
+from aiogram.types import Message, CallbackQuery
 from aiogram.filters import CommandStart, CommandObject
 from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
@@ -13,7 +13,6 @@ from app.api import schemas
 from app.filters.candidate_test import OnTestFilter
 from app.keyboards.admin.hr import hr_main_menu
 from app.keyboards.candidate.candidate import agreement_kb
-from app.img.image_loader import get_logo_file, cache_logo_file_id
 from app.media.video_loader import get_office_video, cache_office_video_file_id
 from app.app_logging import logger
 
@@ -37,7 +36,7 @@ async def start_for_new_user(message: Message, command: CommandObject, state: FS
         id = token_data['entity_id']
         logger.info(f"\n\nENTITY_ID = {id}")
     else:
-        await message.answer(f'Это рекрутинговый бот для ALT GROUP\nесли вы хотите работать с нами - свяжитесь с {HR_CONTACT}')
+        await message.answer(f'Это бот Hr платформы.\nЕсли нужна помощь с откликом — свяжитесь с {HR_CONTACT}')
         return
     
     bot_user = schemas.BotUserCreate(
@@ -76,22 +75,6 @@ async def start_for_new_user(message: Message, command: CommandObject, state: FS
         text = AGREEMENT_TEXT
         keyboard = agreement_kb
     await state.update_data(agreement=True)
-
-    photo = await get_logo_file(redis)
-
-    try:
-        sent_msg = await message.answer_photo(photo=photo)
-    except Exception as e:
-        from aiogram.exceptions import TelegramRetryAfter
-        import asyncio
-        if isinstance(e, TelegramRetryAfter):
-            await asyncio.sleep(e.retry_after)
-            sent_msg = await message.answer_photo(photo=photo)
-        else:
-            raise
-
-    if isinstance(photo, FSInputFile):
-        await cache_logo_file_id(redis, sent_msg)
 
     if role == 'candidate':
         from aiogram.exceptions import TelegramRetryAfter

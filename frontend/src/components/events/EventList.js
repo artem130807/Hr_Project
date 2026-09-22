@@ -47,9 +47,9 @@ const EventList = ({ events, onRefresh }) => {
         const typeMeta = getEventTypeMeta(e.type);
 
         return (
-            <div key={e.id} className={`flex flex-col sm:flex-row justify-between sm:items-center p-4 rounded-xl border ${e.is_done ? 'bg-slate-50 border-slate-200' : 'bg-white border-slate-200 hover:border-[#cda834] hover:shadow-sm'} transition-all gap-4`}>
+            <div key={e.id} className={`flex flex-col sm:flex-row justify-between sm:items-center p-4 rounded-xl border ${e.is_done ? 'bg-slate-50 border-slate-200' : 'bg-white border-slate-200 hover:border-[#4f46e5] hover:shadow-sm'} transition-all gap-4`}>
                 <div className="flex items-center gap-4">
-                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl ${e.is_done ? 'bg-slate-100 opacity-50' : 'bg-[#cda834]/10'}`}>
+                    <div className={`w-12 h-12 rounded-full flex items-center justify-center text-xl ${e.is_done ? 'bg-slate-100 opacity-50' : 'bg-[#4f46e5]/10'}`}>
                         {typeMeta.icon}
                     </div>
                     <div>
@@ -104,7 +104,7 @@ const EventList = ({ events, onRefresh }) => {
                                 Перенести
                             </button>
                             <button
-                                className="px-3 py-1.5 text-xs font-medium text-[#cda834] bg-[#cda834]/10 hover:bg-[#cda834]/20 rounded-lg transition-colors flex items-center gap-1"
+                                className="px-3 py-1.5 text-xs font-medium text-[#4f46e5] bg-[#4f46e5]/10 hover:bg-[#4f46e5]/20 rounded-lg transition-colors flex items-center gap-1"
                                 onClick={() => markDone(e.id)}
                             >
                                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>

@@ -1,19 +1,15 @@
 from datetime import datetime, timezone
 
-from aiogram.types import Message, CallbackQuery, InputMediaPhoto, FSInputFile
+from aiogram.types import Message, CallbackQuery
 from aiogram.filters import CommandStart, CommandObject
 from aiogram import F, Router
 from aiogram.fsm.context import FSMContext
 
-from app.config import HR_CONTACT, WELCOME_CANDIDATE_TEXT, WELCOME_ADMIN_TEXT, AGREEMENT_TEXT, ERROR_MESSAGE
-from app.loader import client
-from app.api.endpoints import Endpoints
-from app.loader import redis_client as redis
+from app.config import WELCOME_CANDIDATE_TEXT
 from app.filters.roles import IsUser 
 from app.filters.candidate_test import OnTestFilter
 from app.keyboards.candidate.candidate import welcome_menu_kb, agreement_kb
 from app.utils.analytic_service import pass_checkpoint
-from app.img.image_loader import get_logo_file, cache_logo_file_id
 from app.app_logging import logger
 
 
@@ -24,22 +20,6 @@ router = Router()
 async def start_for_candidate(message: Message):
 
     keyboard = await welcome_menu_kb(message.from_user.id)
-    photo = await get_logo_file(redis)
-
-    try:
-        sent_msg = await message.answer_photo(photo=photo)
-    except Exception as e:
-        from aiogram.exceptions import TelegramRetryAfter
-        import asyncio
-        if isinstance(e, TelegramRetryAfter):
-            await asyncio.sleep(e.retry_after)
-            sent_msg = await message.answer_photo(photo=photo)
-        else:
-            raise
-
-    if isinstance(photo, FSInputFile):
-        await cache_logo_file_id(redis, sent_msg)
-
     await message.answer(text=WELCOME_CANDIDATE_TEXT, reply_markup=keyboard.as_markup())
 
 
@@ -61,21 +41,4 @@ async def candidate_after_test_main_menu_handler(call: CallbackQuery, state: FSM
     await call.answer()
     text = WELCOME_CANDIDATE_TEXT
     keyboard = await welcome_menu_kb(call.from_user.id)
-    
-    photo = await get_logo_file(redis)
-
-    try:
-        sent_msg = await call.message.edit_media(media=InputMediaPhoto(media=photo))
-    except Exception as e:
-        from aiogram.exceptions import TelegramRetryAfter
-        import asyncio
-        if isinstance(e, TelegramRetryAfter):
-            await asyncio.sleep(e.retry_after)
-            sent_msg = await call.message.edit_media(media=InputMediaPhoto(media=photo))
-        else:
-            raise
-
-    if isinstance(photo, FSInputFile):
-        await cache_logo_file_id(redis, sent_msg)
-
     await call.message.answer(text, reply_markup=keyboard.as_markup())

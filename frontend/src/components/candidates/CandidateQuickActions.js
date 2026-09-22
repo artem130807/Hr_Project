@@ -32,7 +32,7 @@ export default function CandidateQuickActions({
                     onOffer?.(candidate);
                 }}
                 disabled={busy || offerSent}
-                className="w-full px-3 py-2 rounded-xl text-sm font-semibold bg-[#e0bb48] text-slate-900 hover:bg-[#d4af3a] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                className="w-full px-3 py-2 rounded-xl text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
             >
                 {offerSent ? "Оффер уже отправлен" : "Отправить оффер"}
             </button>
@@ -72,7 +72,7 @@ export default function CandidateQuickActions({
                     onOffer?.(candidate);
                 }}
                 disabled={busy || offerSent}
-                className="px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-[#e0bb48] text-slate-900 hover:bg-[#d4af3a] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                className="px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-indigo-600 text-white hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
             >
                 {offerSent ? "Оффер отправлен" : "Отправить оффер"}
             </button>

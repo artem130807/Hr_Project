@@ -28,7 +28,7 @@ export default function ProfTestTimerBar({ formatted, remainingSeconds, totalSec
             <div className="h-1 bg-slate-100">
                 <div
                     className={`h-full transition-[width] duration-300 ${
-                        urgent ? "bg-rose-500" : "bg-[#cda834]"
+                        urgent ? "bg-rose-500" : "bg-[#4f46e5]"
                     }`}
                     style={{ width: `${ratio * 100}%` }}
                 />

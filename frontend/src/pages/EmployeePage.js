@@ -305,29 +305,29 @@ export default function EmployeePage() {
                 <button
                     type="button"
                     onClick={() => setTab("all")}
-                    className={`pb-3 px-2 text-sm font-medium relative ${tab === "all" ? "text-[#cda834]" : "text-slate-500"}`}
+                    className={`pb-3 px-2 text-sm font-medium relative ${tab === "all" ? "text-[#4f46e5]" : "text-slate-500"}`}
                     data-testid="tab-all"
                 >
                     Все сотрудники
-                    {tab === "all" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#cda834]" />}
+                    {tab === "all" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4f46e5]" />}
                 </button>
                 <button
                     type="button"
                     onClick={() => setTab("panel")}
-                    className={`pb-3 px-2 text-sm font-medium relative ${tab === "panel" ? "text-[#cda834]" : "text-slate-500"}`}
+                    className={`pb-3 px-2 text-sm font-medium relative ${tab === "panel" ? "text-[#4f46e5]" : "text-slate-500"}`}
                     data-testid="tab-panel"
                 >
                     Только ERP
-                    {tab === "panel" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#cda834]" />}
+                    {tab === "panel" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4f46e5]" />}
                 </button>
                 <button
                     type="button"
                     onClick={() => setTab("hired")}
-                    className={`pb-3 px-2 text-sm font-medium relative ${tab === "hired" ? "text-[#cda834]" : "text-slate-500"}`}
+                    className={`pb-3 px-2 text-sm font-medium relative ${tab === "hired" ? "text-[#4f46e5]" : "text-slate-500"}`}
                     data-testid="tab-hired"
                 >
                     Только HR-платформа
-                    {tab === "hired" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#cda834]" />}
+                    {tab === "hired" && <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#4f46e5]" />}
                 </button>
             </div>
 
@@ -341,7 +341,7 @@ export default function EmployeePage() {
                                 placeholder="ФИО, отдел, должность, логин или источник…"
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50"
                                 data-testid="all-employees-search"
                             />
                         </div>
@@ -387,7 +387,7 @@ export default function EmployeePage() {
                             placeholder="Поиск по ФИО, отделу, должности…"
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50"
                             data-testid="hired-search"
                         />
                     </div>
@@ -463,7 +463,7 @@ export default function EmployeePage() {
                             placeholder="Поиск по ФИО, логину, роли или отделу..."
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                         />
                         <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
                             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>

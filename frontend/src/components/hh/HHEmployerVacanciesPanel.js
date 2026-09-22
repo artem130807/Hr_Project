@@ -135,7 +135,7 @@ export default function HHEmployerVacanciesPanel({
                                 load(next, 0);
                             }}
                         />
-                        <div className="w-10 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#cda834]"></div>
+                        <div className="w-10 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#4f46e5]"></div>
                     </div>
                     Архивные
                 </label>
@@ -145,7 +145,7 @@ export default function HHEmployerVacanciesPanel({
                 <label className="flex items-center gap-2 text-sm font-medium text-slate-700">
                     <span className="text-slate-500 whitespace-nowrap">Отдел при импорте</span>
                     <select
-                        className="border border-slate-200 rounded-xl text-sm px-3 py-1.5 bg-white focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] outline-none"
+                        className="border border-slate-200 rounded-xl text-sm px-3 py-1.5 bg-white focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] outline-none"
                         value={department}
                         onChange={(e) => setDepartment(e.target.value)}
                     >
@@ -262,7 +262,7 @@ export default function HHEmployerVacanciesPanel({
                                     <button
                                         type="button"
                                         onClick={() => setNegotiationsFor({ id: v.hh_vacancy_id, name: v.name })}
-                                        className="flex-1 bg-[#e0bb48] text-black text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-[#d4af3a] transition-colors shadow-sm flex justify-center items-center gap-2"
+                                        className="flex-1 bg-indigo-600 text-white text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-indigo-700 transition-colors shadow-sm flex justify-center items-center gap-2"
                                     >
                                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
                                         Отклики
@@ -283,7 +283,7 @@ export default function HHEmployerVacanciesPanel({
                                     <div className="flex flex-col gap-2">
                                         <div className="flex gap-2">
                                             <select
-                                                className="flex-1 min-w-0 border border-slate-200 rounded-xl text-sm px-3 py-2 bg-white focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] outline-none disabled:opacity-60"
+                                                className="flex-1 min-w-0 border border-slate-200 rounded-xl text-sm px-3 py-2 bg-white focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] outline-none disabled:opacity-60"
                                                 value={selected}
                                                 disabled={!canPickLocal || isLinking}
                                                 onChange={(e) =>

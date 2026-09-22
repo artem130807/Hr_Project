@@ -8,7 +8,7 @@ import {
 } from "../../utils/negotiationListFilters";
 
 const inputClass =
-    "border border-slate-200 rounded-xl px-3 py-2 text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834]";
+    "border border-slate-200 rounded-xl px-3 py-2 text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5]";
 
 export default function HHNegotiationsFilters({ filters, onChange, items, pages = 0 }) {
     const cities = uniqueResumeCities(items);

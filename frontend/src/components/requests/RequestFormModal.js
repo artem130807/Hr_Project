@@ -30,7 +30,7 @@ const URGENCY_OPTIONS = [
 ];
 
 function fieldClass(hasError) {
-  return `w-full px-3.5 py-2.5 text-sm rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/40 focus:border-[#cda834] transition-all ${
+  return `w-full px-3.5 py-2.5 text-sm rounded-xl border bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40 focus:border-[#4f46e5] transition-all ${
     hasError ? "border-rose-400" : "border-slate-200"
   }`;
 }
@@ -91,7 +91,7 @@ function ToggleRow({ checked, onChange, title, hint }) {
       type="button"
       onClick={() => onChange(!checked)}
       className={`w-full text-left rounded-xl border px-4 py-3 transition-colors ${
-        checked ? "border-[#cda834] bg-[#cda834]/10" : "border-slate-200 bg-slate-50 hover:bg-white"
+        checked ? "border-[#4f46e5] bg-[#4f46e5]/10" : "border-slate-200 bg-slate-50 hover:bg-white"
       }`}
     >
       <div className="flex items-center justify-between gap-3">
@@ -99,7 +99,7 @@ function ToggleRow({ checked, onChange, title, hint }) {
           <p className="text-sm font-medium text-slate-800">{title}</p>
           {hint ? <p className="text-xs text-slate-500 mt-0.5">{hint}</p> : null}
         </div>
-        <span className={`relative inline-flex h-6 w-11 shrink-0 rounded-full transition-colors ${checked ? "bg-[#cda834]" : "bg-slate-300"}`}>
+        <span className={`relative inline-flex h-6 w-11 shrink-0 rounded-full transition-colors ${checked ? "bg-[#4f46e5]" : "bg-slate-300"}`}>
           <span className={`absolute top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform ${checked ? "left-[22px]" : "left-0.5"}`} />
         </span>
       </div>
@@ -420,7 +420,7 @@ export default function RequestFormModal({ onClose, onSubmit, user = {}, isLoadi
             ) : null}
           </div>
           <div className="mt-4 h-1.5 rounded-full bg-slate-100 overflow-hidden">
-            <div className="h-full rounded-full bg-[#cda834] transition-all" style={{ width: `${progress}%` }} />
+            <div className="h-full rounded-full bg-[#4f46e5] transition-all" style={{ width: `${progress}%` }} />
           </div>
           <nav className="mt-4 flex gap-1.5 overflow-x-auto pb-1">
             {STEPS.map((item) => (
@@ -432,7 +432,7 @@ export default function RequestFormModal({ onClose, onSubmit, user = {}, isLoadi
                   step === item.id
                     ? "bg-slate-900 text-white"
                     : step > item.id
-                      ? "bg-[#cda834]/15 text-slate-800"
+                      ? "bg-[#4f46e5]/15 text-slate-800"
                       : "bg-slate-100 text-slate-500 hover:bg-slate-200"
                 }`}
               >
@@ -788,7 +788,7 @@ export default function RequestFormModal({ onClose, onSubmit, user = {}, isLoadi
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="px-5 py-2.5 rounded-xl bg-[#e0bb48] text-slate-900 text-sm font-semibold hover:bg-[#d4af3a] disabled:opacity-60"
+                  className="px-5 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-60"
                 >
                   {isLoading ? "Создание…" : "Создать заявку"}
                 </button>

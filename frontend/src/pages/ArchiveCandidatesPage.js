@@ -126,7 +126,7 @@ export default function ArchiveCandidatesPage() {
   if (loading) {
     return (
       <MainLayout>
-        <p className="text-[#666666]">Загрузка…</p>
+        <p className="text-slate-500">Загрузка…</p>
       </MainLayout>
     );
   }
@@ -150,7 +150,7 @@ export default function ArchiveCandidatesPage() {
                   placeholder="ФИО, телефон..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-slate-400">
                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
@@ -164,7 +164,7 @@ export default function ArchiveCandidatesPage() {
                 <select
                   value={statusFilter}
                   onChange={(e) => setStatusFilter(e.target.value)}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all appearance-none cursor-pointer"
+                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all appearance-none cursor-pointer"
                 >
                   <option value="">Все статусы</option>
                   {statusDict.map(s => (
@@ -183,7 +183,7 @@ export default function ArchiveCandidatesPage() {
                 <select
                   value={vacancyFilter}
                   onChange={(e) => setVacancyFilter(e.target.value)}
-                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all appearance-none cursor-pointer"
+                  className="w-full border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all appearance-none cursor-pointer"
                 >
                   <option value="">Все вакансии</option>
                   {vacancies.map(v => (

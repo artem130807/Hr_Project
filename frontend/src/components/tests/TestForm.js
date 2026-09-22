@@ -336,7 +336,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                     type="text"
                                     value={formData.name}
                                     onChange={(e) => handleChange('name', e.target.value)}
-                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                     required
                                 />
                             </div>
@@ -348,7 +348,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                         <select
                                             value={formData.test_type}
                                             onChange={(e) => handleChange('test_type', e.target.value)}
-                                            className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer disabled:opacity-50"
+                                            className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer disabled:opacity-50"
                                             required 
                                             disabled={isAiTest}
                                         >
@@ -368,7 +368,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                         <select
                                             value={formData.results_type}
                                             onChange={(e) => handleChange('results_type', e.target.value)}
-                                            className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer disabled:opacity-50"
+                                            className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer disabled:opacity-50"
                                             required 
                                             disabled={isAiTest}
                                         >
@@ -390,7 +390,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                         type="url"
                                         value={formData.url}
                                         onChange={(e) => handleChange('url', e.target.value)}
-                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                         placeholder="https://example.com/test"
                                     />
                                 </div>
@@ -407,7 +407,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                         max={600}
                                         value={formData.duration_minutes}
                                         onChange={(e) => handleChange("duration_minutes", e.target.value)}
-                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                         placeholder="Например, 30"
                                         data-testid="test-duration-minutes"
                                     />
@@ -426,7 +426,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                 <textarea
                                     value={formData.description}
                                     onChange={(e) => handleChange('description', e.target.value)}
-                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[80px] disabled:opacity-50"
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[80px] disabled:opacity-50"
                                     placeholder="Краткое описание теста"
                                     disabled={isAiTest}
                                 />
@@ -437,7 +437,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                 <textarea
                                     value={formData.instruction_text}
                                     onChange={(e) => handleChange('instruction_text', e.target.value)}
-                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all min-h-[100px] disabled:opacity-50"
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all min-h-[100px] disabled:opacity-50"
                                     placeholder="Подробная инструкция по прохождению теста"
                                     required 
                                     disabled={isAiTest}
@@ -452,7 +452,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                     <button
                                         type="button"
                                         onClick={handleAddQuestion}
-                                        className="text-[#cda834] hover:text-[#b8952b] text-sm font-semibold transition-colors"
+                                        className="text-[#4f46e5] hover:text-[#b8952b] text-sm font-semibold transition-colors"
                                     >
                                         + Добавить вопрос
                                     </button>
@@ -474,7 +474,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                                 <textarea
                                                     value={question.question_text}
                                                     onChange={e => handleQuestionChange(qIndex, "question_text", e.target.value)}
-                                                    className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all mb-4"
+                                                    className="w-full border border-slate-200 rounded-lg px-3 py-2 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all mb-4"
                                                     rows="2"
                                                     placeholder="Текст вопроса"
                                                     required

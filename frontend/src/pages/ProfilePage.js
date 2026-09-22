@@ -133,7 +133,7 @@ export default function ProfilePage() {
                             {!isEditing && (
                                 <button 
                                     onClick={() => setIsEditing(true)}
-                                    className="text-sm font-semibold text-[#cda834] hover:text-[#b8942b] transition-colors"
+                                    className="text-sm font-semibold text-[#4f46e5] hover:text-[#b8942b] transition-colors"
                                 >
                                     Изменить
                                 </button>
@@ -150,7 +150,7 @@ export default function ProfilePage() {
                                         value={formData.name}
                                         onChange={handleInputChange}
                                         required
-                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                     />
                                 </div>
                                 <div>
@@ -161,7 +161,7 @@ export default function ProfilePage() {
                                         value={formData.username}
                                         onChange={handleInputChange}
                                         required
-                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                     />
                                 </div>
                                 <div className="pt-4 border-t border-slate-100">
@@ -173,7 +173,7 @@ export default function ProfilePage() {
                                         value={formData.newPassword}
                                         onChange={handleInputChange}
                                         placeholder="Оставьте пустым, чтобы не менять"
-                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                        className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                     />
                                 </div>
                                 <div className="flex gap-3 pt-2">
@@ -187,7 +187,7 @@ export default function ProfilePage() {
                                     <button 
                                         type="submit"
                                         disabled={saving}
-                                        className="flex-1 bg-[#cda834] text-white px-4 py-2.5 rounded-xl hover:bg-[#b8942b] transition-colors shadow-sm text-sm font-medium disabled:opacity-70"
+                                        className="flex-1 bg-[#4f46e5] text-white px-4 py-2.5 rounded-xl hover:bg-[#b8942b] transition-colors shadow-sm text-sm font-medium disabled:opacity-70"
                                     >
                                         {saving ? 'Сохранение...' : 'Сохранить'}
                                     </button>
@@ -263,7 +263,7 @@ export default function ProfilePage() {
                             </div>
                             <div className="w-full bg-slate-100 rounded-full h-2.5 mb-2 overflow-hidden border border-slate-200/50">
                                 <div 
-                                    className="bg-[#cda834] h-2.5 rounded-full transition-all duration-1000 ease-out" 
+                                    className="bg-[#4f46e5] h-2.5 rounded-full transition-all duration-1000 ease-out" 
                                     style={{ width: `${mockProgress}%` }}
                                 ></div>
                             </div>

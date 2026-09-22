@@ -62,7 +62,7 @@ export default function ProfileForm({
                     <select
                         value={form.department}
                         onChange={(e) => setForm({ ...form, department: e.target.value })}
-                        className="mt-1.5 border border-slate-200 rounded-xl px-3 py-2.5 w-full bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50"
+                        className="mt-1.5 border border-slate-200 rounded-xl px-3 py-2.5 w-full bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50"
                         required
                         disabled={Boolean(existing)}
                         data-testid="department-profile-department"

@@ -93,7 +93,7 @@ export default function EmployeeDetailPage() {
                                             required
                                             value={workStartDate}
                                             onChange={(event) => setWorkStartDate(event.target.value)}
-                                            className="rounded-xl border border-slate-200 px-4 py-2.5 focus:border-[#cda834] focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                                            className="rounded-xl border border-slate-200 px-4 py-2.5 focus:border-[#4f46e5] focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                                             data-testid="employee-work-start-date"
                                         />
                                     </label>

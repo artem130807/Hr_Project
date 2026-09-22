@@ -113,7 +113,7 @@ export default function TestList({tests, onTestDeleted, onTestClick, onTestEdit,
                                     )}
                                     <button 
                                         onClick={() => onTestClick(test)} 
-                                        className="w-8 h-8 flex items-center justify-center bg-white border border-slate-200 text-[#cda834] rounded-lg hover:bg-yellow-50 hover:border-yellow-200 transition-all shadow-sm"
+                                        className="w-8 h-8 flex items-center justify-center bg-white border border-slate-200 text-indigo-600 rounded-lg hover:bg-indigo-50 hover:border-indigo-200 transition-all shadow-sm"
                                         title="Просмотр"
                                     >
                                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>

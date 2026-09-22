@@ -92,7 +92,7 @@ export default function AdaptationPublicFormPage() {
         return (
             <main className="min-h-screen grid place-items-center bg-[#f4f6fb] px-4">
                 <div className="max-w-md rounded-2xl border border-slate-200 bg-white p-8 text-center shadow-sm">
-                    <p className="text-xs font-semibold tracking-[0.16em] text-[#cda834]">АДАПТАЦИЯ</p>
+                    <p className="text-xs font-semibold tracking-[0.16em] text-[#4f46e5]">АДАПТАЦИЯ</p>
                     <h1 className="mt-2 text-xl font-semibold text-slate-900">Форма заполнена</h1>
                     <p className="mt-2 text-slate-500">{message || "Ответы уже были отправлены."}</p>
                 </div>
@@ -131,7 +131,7 @@ export default function AdaptationPublicFormPage() {
         <main className="min-h-screen bg-[#f4f6fb] px-4 py-8">
             <form onSubmit={submit} className="mx-auto max-w-3xl space-y-5 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
                 <div>
-                    <p className="text-xs font-semibold tracking-[0.16em] text-[#cda834]">АДАПТАЦИЯ СОТРУДНИКА</p>
+                    <p className="text-xs font-semibold tracking-[0.16em] text-[#4f46e5]">АДАПТАЦИЯ СОТРУДНИКА</p>
                     <h1 className="mt-1 text-2xl font-bold text-slate-900">{form.title}</h1>
                     <p className="mt-1 text-sm text-slate-500">
                         {form.full_name ? `${form.full_name} · ` : ""}

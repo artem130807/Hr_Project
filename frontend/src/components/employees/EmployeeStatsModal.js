@@ -88,7 +88,7 @@ export default function EmployeeStatsModal({ employee, onClose }) {
                             </div>
                             <div className="w-full bg-slate-100 rounded-full h-3 mb-2 overflow-hidden border border-slate-200/50">
                                 <div 
-                                    className="bg-[#cda834] h-3 rounded-full transition-all duration-1000 ease-out" 
+                                    className="bg-[#4f46e5] h-3 rounded-full transition-all duration-1000 ease-out" 
                                     style={{ width: `${mockProgress}%` }}
                                 ></div>
                             </div>
@@ -104,7 +104,7 @@ export default function EmployeeStatsModal({ employee, onClose }) {
                                     <BarChartIcon />
                                     График эффективности
                                 </h3>
-                                <select className="text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-[#cda834]">
+                                <select className="text-xs font-bold text-slate-500 uppercase tracking-wider bg-slate-50 border border-slate-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-[#4f46e5]">
                                     <option>За неделю</option>
                                     <option>За месяц</option>
                                     <option>За год</option>
@@ -114,7 +114,7 @@ export default function EmployeeStatsModal({ employee, onClose }) {
                                 {chartBars.map((val, i) => (
                                     <div key={i} className="w-full bg-slate-100 rounded-t-lg relative group cursor-pointer transition-all hover:bg-slate-200" style={{ height: '100%' }}>
                                         <div 
-                                            className="absolute bottom-0 left-0 w-full bg-[#cda834]/80 rounded-t-lg transition-all duration-500 group-hover:bg-[#cda834]" 
+                                            className="absolute bottom-0 left-0 w-full bg-[#4f46e5]/80 rounded-t-lg transition-all duration-500 group-hover:bg-[#4f46e5]" 
                                             style={{ height: `${(val / maxBar) * 100}%` }}
                                         ></div>
                                         {/* Tooltip mock */}
@@ -146,7 +146,7 @@ export default function EmployeeStatsModal({ employee, onClose }) {
                                 <div className="space-y-5">
                                     {mockInteractions.map((interaction, idx) => (
                                         <div key={interaction.id} className="relative pl-10">
-                                            <div className={`absolute left-[11px] top-1.5 w-2 h-2 rounded-full border-2 border-white ring-1 ring-slate-300 ${idx === 0 ? 'bg-[#cda834] ring-[#cda834]/50' : 'bg-slate-400'}`}></div>
+                                            <div className={`absolute left-[11px] top-1.5 w-2 h-2 rounded-full border-2 border-white ring-1 ring-slate-300 ${idx === 0 ? 'bg-[#4f46e5] ring-[#4f46e5]/50' : 'bg-slate-400'}`}></div>
                                             <div className="text-xs font-bold text-slate-500 mb-0.5">{interaction.time}</div>
                                             <div className="text-sm font-semibold text-slate-900">{interaction.type}</div>
                                             <div className="text-xs font-medium text-slate-500 mt-1">{interaction.details}</div>

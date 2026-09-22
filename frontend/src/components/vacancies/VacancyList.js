@@ -258,7 +258,7 @@ export default function VacancyList({
                                     onClick={() => handleRunFilter(vacancy)}
                                     disabled={Boolean(runningFilter[vacancy.id])}
                                     title="Отказать порцией откликов на HH, которые не проходят фильтр (лимит, чтобы не нагружать API)"
-                                    className="text-sm px-3 py-1.5 bg-[#cda834]/15 text-slate-800 hover:bg-[#cda834]/25 rounded-lg transition-colors font-medium border border-[#cda834]/40 disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="text-sm px-3 py-1.5 bg-[#4f46e5]/15 text-slate-800 hover:bg-[#4f46e5]/25 rounded-lg transition-colors font-medium border border-[#4f46e5]/40 disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {runningFilter[vacancy.id] ? "Прогон…" : "Прогнать фильтр"}
                                 </button>
@@ -289,7 +289,7 @@ export default function VacancyList({
                                         type="button"
                                         onClick={() => handleSyncToHH(vacancy)}
                                         disabled={syncing[vacancy.id]}
-                                        className="flex-1 bg-[#e0bb48] text-black px-3 py-2 rounded-xl hover:bg-[#d4af3a] transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="flex-1 bg-indigo-600 text-white px-3 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {syncing[vacancy.id] ? "Обновляем..." : "Обновить на HH"}
                                     </button>
@@ -308,7 +308,7 @@ export default function VacancyList({
                                     type="button"
                                     onClick={() => handlePublishToHH(vacancy)}
                                     disabled={publishing[vacancy.id]}
-                                    className="flex-1 bg-[#e0bb48] text-black px-3 py-2 rounded-xl hover:bg-[#d4af3a] transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="flex-1 bg-indigo-600 text-white px-3 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {publishing[vacancy.id] ? "Публикуем..." : "На HH.ru"}
                                 </button>

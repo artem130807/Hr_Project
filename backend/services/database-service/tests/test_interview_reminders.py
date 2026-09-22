@@ -23,7 +23,7 @@ def test_reminder_text_uses_patronymic_greeting():
     )
     assert text.startswith("Артём Валерьевич, здравствуйте!")
     assert "28.08.2026 в 10:00" in text
-    assert "собеседовании в ALT" in text
+    assert "собеседовании" in text
 
 
 def test_normalize_naive_remind_at_is_samara():

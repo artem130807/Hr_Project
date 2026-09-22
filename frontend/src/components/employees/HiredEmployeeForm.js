@@ -2,7 +2,7 @@ import { useState } from "react";
 import { DEPARTMENTS } from "../../config/api";
 
 const inputClass =
-    "w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all";
+    "w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all";
 
 /**
  * Manual HR employee create (POST /employees) — not ERP panel users.

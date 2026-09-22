@@ -150,7 +150,7 @@ export default function EmployeeForm({initialData , onClose, onEmployeeAdded }) 
                             type="text"
                             value={formData.name}
                             onChange={(e) => handleChange('name', e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             required
                             placeholder="Иванов Иван Иванович"
                             data-testid="panel-user-name"
@@ -164,7 +164,7 @@ export default function EmployeeForm({initialData , onClose, onEmployeeAdded }) 
                                 <select
                                     value={formData.role}
                                     onChange={(e) => handleChange('role', e.target.value)}
-                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                                     required
                                     data-testid="panel-user-role"
                                 >
@@ -186,7 +186,7 @@ export default function EmployeeForm({initialData , onClose, onEmployeeAdded }) 
                                 <select 
                                     value={formData.department || ""} 
                                     onChange={e => handleChange("department", e.target.value || null)}
-                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer"
+                                    className="w-full appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer"
                                 >
                                     <option value="">Не указан</option>
                                     {DEPARTMENTS.map(dept => (
@@ -206,7 +206,7 @@ export default function EmployeeForm({initialData , onClose, onEmployeeAdded }) 
                             type="date"
                             value={formData.date_hired}
                             onChange={(e) => handleChange("date_hired", e.target.value)}
-                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                            className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                             data-testid="panel-user-date-hired"
                         />
                     </div>
@@ -222,7 +222,7 @@ export default function EmployeeForm({initialData , onClose, onEmployeeAdded }) 
                                 type="email"
                                 value={formData.username}
                                 onChange={(e) => handleChange('username', e.target.value)}
-                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                 required
                                 placeholder="ivanov@company.com"
                                 data-testid="panel-user-email"
@@ -238,7 +238,7 @@ export default function EmployeeForm({initialData , onClose, onEmployeeAdded }) 
                                     type="password"
                                     value={formData.password}
                                     onChange={(e) => handleChange('password', e.target.value)}
-                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all"
+                                    className="w-full border border-slate-200 rounded-xl px-4 py-2.5 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all"
                                     placeholder="••••••••"
                                     data-testid="panel-user-password"
                                 />

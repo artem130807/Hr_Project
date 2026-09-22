@@ -296,7 +296,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                                 setDetail(null);
                                 load(next, 0);
                             }}
-                            className="appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#cda834]/50 focus:border-[#cda834] transition-all cursor-pointer min-w-[200px]"
+                            className="appearance-none border border-slate-200 rounded-xl px-4 py-2.5 pr-10 text-sm font-medium text-slate-700 bg-white hover:bg-slate-50 focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/50 focus:border-[#4f46e5] transition-all cursor-pointer min-w-[200px]"
                         >
                             {(collections.length
                                 ? collections
@@ -331,7 +331,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                         type="button"
                         onClick={handleBulkImport}
                         disabled={bulkImporting || visibleItems.length === 0}
-                        className="text-sm px-4 py-2.5 bg-[#e0bb48] text-black rounded-xl hover:bg-[#d4af3a] font-medium disabled:opacity-50"
+                        className="text-sm px-4 py-2.5 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 font-medium disabled:opacity-50"
                     >
                         {bulkImporting ? "Импорт..." : `Импорт всех (${visibleItems.length})`}
                     </button>
@@ -396,7 +396,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                                             }}
                                             className={`text-left bg-white border p-4 rounded-2xl shadow-sm transition-all flex gap-4 justify-between items-center cursor-pointer ${
                                                 selected
-                                                    ? "border-[#cda834] ring-2 ring-[#cda834]/30"
+                                                    ? "border-[#4f46e5] ring-2 ring-[#4f46e5]/30"
                                                     : "border-slate-200/80 hover:shadow-md hover:border-slate-300"
                                             }`}
                                         >
@@ -444,7 +444,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                                                         type="button"
                                                         disabled={importing[item.id]}
                                                         onClick={() => handleImport(item)}
-                                                        className="text-sm bg-[#e0bb48] text-black px-3 py-2 rounded-xl hover:bg-[#d4af3a] disabled:opacity-50 font-medium"
+                                                        className="text-sm bg-indigo-600 text-white px-3 py-2 rounded-xl hover:bg-indigo-700 disabled:opacity-50 font-medium"
                                                     >
                                                         {importing[item.id] ? "..." : "В кандидаты"}
                                                     </button>
@@ -570,7 +570,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                                                 type="button"
                                                 onClick={() => handleImport({ id: selectedId, already_candidate: detail.already_candidate })}
                                                 disabled={importing[selectedId]}
-                                                className="text-sm px-4 py-2.5 rounded-xl bg-[#e0bb48] text-black hover:bg-[#d4af3a] font-medium disabled:opacity-50"
+                                                className="text-sm px-4 py-2.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 font-medium disabled:opacity-50"
                                             >
                                                 {importing[selectedId] ? "Импорт..." : "В кандидаты"}
                                             </button>
@@ -616,7 +616,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                                                     value={actionMessage}
                                                     onChange={(e) => setActionMessage(e.target.value)}
                                                     rows={3}
-                                                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#cda834]/40"
+                                                    className="w-full border border-slate-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#4f46e5]/40"
                                                     placeholder="Текст сообщения для HH.ru"
                                                 />
                                                 <div className="flex gap-2 mt-3">

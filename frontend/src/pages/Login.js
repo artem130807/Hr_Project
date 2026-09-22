@@ -47,7 +47,7 @@ export default function Login() {
 
     if (authLoading) {
         return (
-            <div className="flex items-center justify-center min-h-screen bg-[#f5f5f5] text-slate-600">
+            <div className="login-screen flex items-center justify-center min-h-screen text-slate-600">
                 Проверка сессии…
             </div>
         );
@@ -58,43 +58,45 @@ export default function Login() {
     }
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-[#f5f5f5]">
+        <div className="login-screen flex items-center justify-center min-h-screen px-4">
             <form
                 onSubmit={handleLogin}
-                className="bg-white p-8 rounded shadow w-96 border border-[#e0bb48]"
+                className="bg-white p-8 rounded-3xl w-full max-w-md shadow-[0_24px_60px_rgba(15,23,42,0.12)]"
             >
-                <h2 className="text-2xl mb-4 text-black font-bold">Вход в систему</h2>
+                <p className="text-xs uppercase tracking-[0.18em] text-indigo-600 font-semibold">Подбор</p>
+                <h1 className="text-[28px] mt-1 mb-1 text-slate-900 font-semibold tracking-tight">Hr платформа</h1>
+                <p className="text-sm text-slate-500 mb-6">Вход для команды подбора</p>
 
+                <label className="block text-sm font-medium text-slate-700 mb-1">Логин</label>
                 <input
                     type="text"
-                    placeholder="Имя пользователя"
+                    autoComplete="username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="w-full mb-4 border border-[#666666] rounded p-2 focus:border-[#e0bb48] focus:outline-none"
+                    className="w-full mb-4 border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-100"
                     required
                 />
 
+                <label className="block text-sm font-medium text-slate-700 mb-1">Пароль</label>
                 <input
                     type="password"
-                    placeholder="Пароль"
+                    autoComplete="current-password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-                    className="w-full mb-4 border border-[#666666] rounded p-2 focus:border-[#e0bb48] focus:outline-none"
+                    className="w-full mb-4 border border-slate-200 rounded-xl px-3 py-2.5 focus:border-indigo-500 focus:outline-none focus:ring-4 focus:ring-indigo-100"
                     required
                 />
 
-                {error && <div className="text-red-500 mb-2">{error}</div>}
-                {success && <div className="text-green-600 mb-2">{success}</div>}
+                {error && <div className="text-rose-600 text-sm mb-3">{error}</div>}
+                {success && <div className="text-emerald-600 text-sm mb-3">{success}</div>}
 
-                <div className="flex space-x-2">
-                    <button
-                        type="submit"
-                        className="flex-1 bg-[#e0bb48] text-black font-medium p-2 rounded hover:bg-[#d4af3a]"
-                        disabled={loading}
-                    >
-                        {loading ? "Проверка..." : "Войти"}
-                    </button>
-                </div>
+                <button
+                    type="submit"
+                    className="w-full bg-indigo-600 text-white font-semibold py-2.5 rounded-xl hover:bg-indigo-700 disabled:opacity-60"
+                    disabled={loading}
+                >
+                    {loading ? "Проверка..." : "Войти"}
+                </button>
             </form>
         </div>
     );
