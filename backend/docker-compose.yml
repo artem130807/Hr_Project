@@ -1,0 +1,131 @@
+volumes:
+  pgdata:
+  redis_stack_data:
+
+networks:
+  backend:
+    driver: bridge
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres_db
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "${POSTGRES_PORT}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - backend
+
+  redis:
+    image: redis/redis-stack-server:7.2.0-v18
+    container_name: redis_db
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "6379:6379"
+      - "8001:8001"
+    volumes:
+      - redis_stack_data:/data
+    networks:
+      backend:
+        aliases:
+          - redis_db
+
+  database-service:
+    build:
+      context: ./services/database-service
+      dockerfile: Dockerfile
+    container_name: database_service
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - redis
+    ports:
+      - "8000:8000"
+    networks:
+      - backend
+
+  hr-worker:
+    build:
+      context: ./services/database-service
+      dockerfile: Dockerfile
+    container_name: hr_worker
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+      - redis
+    command: ["huey_consumer", "app.worker.app.huey", "-w", "2", "-k", "thread"]
+    networks:
+      - backend
+
+  bot-service:
+    build:
+      context: ./services/bot-service
+      dockerfile: Dockerfile
+    container_name: bot_service
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - database-service
+      - redis
+    ports:
+      - "8002:8002"
+    networks:
+      - backend
+
+  hh-service:
+    build:
+      context: ./services/hh-service
+      dockerfile: Dockerfile
+    container_name: hh_service
+    restart: always
+    env_file:
+      - .env
+    depends_on:
+      - database-service
+      - redis
+    ports:
+      - "8003:8003"
+    networks:
+      - backend
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    entrypoint: >
+      sh -c "trap exit TERM; while :; do sleep 12h & wait $${!}; certbot renew --webroot -w /var/www/certbot; done;"
+    networks:
+      - backend
+
+  nginx:
+    image: nginx:latest
+    container_name: hr_nginx
+    restart: always
+    environment:
+      - API_DOMAIN=${API_DOMAIN}
+    volumes:
+      - ./nginx/templates:/etc/nginx/templates
+      - ./certbot/conf:/etc/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - database-service
+      - bot-service
+    networks:
+      - backend

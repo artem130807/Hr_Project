@@ -1,0 +1,10 @@
+.git
+.env
+.env.*
+!.env.docker.example
+*.md
+Makefile
+bin/
+tmp/
+.idea/
+.vscode/

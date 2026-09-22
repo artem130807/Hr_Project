@@ -1,0 +1,15 @@
+server {
+    listen 80;
+    server_name ai.istendlay.ru;
+
+    root /var/www/certbot;
+
+    location /.well-known/acme-challenge/ {
+        # просто используем root, а не alias
+        try_files $uri =404;
+    }
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}

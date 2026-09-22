@@ -1,0 +1,16 @@
+{
+  "Rules": [
+    {
+      "ID": "expire-candidate-document-drafts",
+      "Status": "Enabled",
+      "Filter": {
+        "And": {
+          "Prefix": "candidate-docs/",
+          "Tags": [{ "Key": "status", "Value": "draft" }]
+        }
+      },
+      "Expiration": { "Days": 3 },
+      "AbortIncompleteMultipartUpload": { "DaysAfterInitiation": 1 }
+    }
+  ]
+}

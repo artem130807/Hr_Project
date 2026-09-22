@@ -1,0 +1,25 @@
+name: 🚀 Deploy to VDS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy via SSH
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ vars.SSH_HOST }}
+          username: ${{ vars.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ${{ vars.PROJECT_DIR }}
+            git pull
+            docker compose -f ${{ vars.DOCKER_COMPOSE_FILE }} up -d --build

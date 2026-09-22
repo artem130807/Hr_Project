@@ -1,0 +1,12 @@
+server {
+    listen 80;
+    server_name db.istendlay.ru hh.istendlay.ru;
+
+    location /.well-known/acme-challenge/ {
+        alias /var/www/certbot/.well-known/acme-challenge/;
+    }
+
+    location / {
+        return 404;
+    }
+}

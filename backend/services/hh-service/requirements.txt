@@ -1,0 +1,36 @@
+# Core
+fastapi==0.115.0
+python-multipart==0.0.20
+uvicorn[standard]==0.30.0
+python-dotenv==1.0.1
+
+# Pydantic 
+pydantic==2.5.3
+pydantic[email]==2.5.3
+pydantic-settings==2.1.0
+
+# Auth
+pyjwt==2.10.1
+cryptography==44.0.2
+
+# HTTP clients
+httpx==0.27.0
+rapidfuzz==3.14.1
+
+# Celery stack
+amqp==5.3.1
+billiard==4.2.3
+APScheduler==3.10.4
+click-didyoumean==0.3.1
+click-plugins==1.1.1.2
+click-repl==0.3.0
+kombu==5.5.4
+huey==2.5.2
+prompt-toolkit==3.0.52
+python-dateutil==2.9.0.post0
+tzdata==2025.2
+vine==5.1.0
+wcwidth==0.2.14
+
+# Redis broker (опционально, но почти всегда нужен)
+redis==4.5.0

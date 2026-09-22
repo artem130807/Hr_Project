@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-slate-200 rounded-full;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-300;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.aminatie-slide-in {
+  animation: slide-in 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pdf-export-host {
+  position: fixed;
+  left: -900px;
+  top: 0;
+  width: 794px;
+  background: #fff;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pdf-source-host {
+  display: none;
+}
+
+.pdf-export-clone {
+  max-height: none !important;
+  overflow: visible !important;
+  height: auto !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 794px !important;
+  max-width: 794px !important;
+  margin: 0 !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+  background: #fff !important;
+}
+
+.pdf-export-clone.prof-result-print-root,
+.pdf-export-clone.prof-test-print-root {
+  padding: 28px 32px 36px !important;
+  color: #0f172a;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+}
+
+.pdf-export-clone .pdf-kpi-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 10px !important;
+}

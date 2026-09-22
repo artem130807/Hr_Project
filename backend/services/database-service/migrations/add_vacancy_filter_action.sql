@@ -1,0 +1,2 @@
+ALTER TABLE vacancy_filters
+    ADD COLUMN IF NOT EXISTS action VARCHAR(32) NOT NULL DEFAULT 'discard';

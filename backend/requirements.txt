@@ -1,0 +1,35 @@
+# Core
+fastapi==0.111.0
+uvicorn[standard]==0.30.0
+python-dotenv==1.0.1
+pyjwt==2.10.1
+
+# Database
+sqlalchemy==2.0.30
+asyncpg==0.29.0
+alembic==1.13.1
+greenlet==3.2.4
+aioredis==2.0.1
+
+# Pydantic (уточни версию, если нужно использовать v1)
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# Telegram Bot
+aiogram==3.4.1
+
+# HTTP clients (для общения между сервисами)
+httpx==0.27.0
+aiohttp==3.9.5
+
+# Security (если используешь хеширование паролей или токены)
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0  # если JWT всё же понадобится
+
+# Testing
+pytest==8.2.1
+pytest-asyncio==0.23.7
+httpx[http2]==0.27.0
+
+# Optional (если используешь CORS или Swagger улучшения)
+fastapi[all]==0.111.0

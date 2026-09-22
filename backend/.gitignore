@@ -1,0 +1,19 @@
+.env
+__pycache__
+venv
+.venv
+.DS_store
+test.py
+openapi.txt
+post_access_test.py
+test_vacancy_post.py
+*.log
+openapi (3).yml
+private.pem
+.claude
+.venv-test
+.env.hh.local
+.coverage
+.coverage.*
+htmlcov/
+*.pem

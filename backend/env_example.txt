@@ -1,0 +1,45 @@
+#TOKENS
+SECRET_KEY=secret-key
+PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
+SUPERUSER_NAME=username
+SUPERUSER_PASSWORD=password
+SERVICE_CLIENTS=bot-service:tg-service-secret-password,hh-service:hh-service-secret-password,ai-service:ai-service-secret-password
+ACCESS_TOKEN_EXPIRES=90
+
+#database-service
+POSTGRES_DB=db
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_HOST=postgres_db
+POSTGRES_PORT=5432
+
+#bot-service
+BOT_TOKEN=8225297945:AAGmvJ11Ags1MQTlXfuHugMkfGwde2SOv6s
+BOT_NAME=test_for_hr_bot
+BOT_SERVICE_CLIENT_ID=bot-service
+BOT_SERVICE_CLIENT_SECRET=tg-service-secret-password
+
+
+#service urls
+DB_SERVICE_URL=http://database-service:8000/v1
+REDIS_SERVICE_URL=redis://redis_db:6379/0
+
+BOT_NAME=test_for_hr_bot
+
+#hh-service
+HH_SERVICE_CLIENT_ID=hh-service
+HH_SERVICE_CLIENT_SECRET=hh-service-secret-password
+
+#HH API
+EMPLOYER_ID=
+HH_CLIENT_ID=
+HH_CLIENT_SECRET=
+HH_EMAIL=
+HH_ACCESS_TOKEN=
+HH_REFRESH_TOKEN=
+HH_APP_NAME=HR-Bot
+HH_APP_VERSION=1.0
+
+#DEPLOY
+DOMAIN=istendlay.ru
+FRONTEND_URL=

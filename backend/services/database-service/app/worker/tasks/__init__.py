@@ -1,0 +1,17 @@
+"""Huey task adapters. Importing this package registers all jobs."""
+from app.worker.tasks import adaptation_notifications as adaptation_notifications  # noqa: F401
+from app.worker.tasks import ai_eval_relay as ai_eval_relay  # noqa: F401
+from app.worker.tasks import call_whisper as call_whisper  # noqa: F401
+from app.worker.tasks import candidate_document_drafts as candidate_document_drafts  # noqa: F401
+from app.worker.tasks import complete_overdue_events as complete_overdue_events  # noqa: F401
+from app.worker.tasks import erp_sync as erp_sync  # noqa: F401
+from app.worker.tasks import hh_auto_reject as hh_auto_reject  # noqa: F401
+from app.worker.tasks import hh_autosearch as hh_autosearch  # noqa: F401
+from app.worker.tasks import hh_token_keepalive as hh_token_keepalive  # noqa: F401
+from app.worker.tasks import interview_reminders as interview_reminders  # noqa: F401
+from app.worker.tasks import interview_reminders_purge as interview_reminders_purge  # noqa: F401
+from app.worker.tasks import permanent_events as permanent_events  # noqa: F401
+from app.worker.tasks import status_update as status_update  # noqa: F401
+from app.worker.tasks import t2_call_sync as t2_call_sync  # noqa: F401
+from app.worker.tasks import t2_stt_backfill as t2_stt_backfill  # noqa: F401
+from app.worker.tasks import t2_token_keepalive as t2_token_keepalive  # noqa: F401

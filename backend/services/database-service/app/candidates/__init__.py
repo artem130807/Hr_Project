@@ -1,0 +1,1 @@
+"""Candidate funnel domain helpers."""
