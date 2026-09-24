@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import MainLayout from "../layout/MainLayout";
 import { CALL_OUTCOMES, CALL_DIRECTIONS } from "../data/callOutcomes";
 import { getCallConversations } from "../services/callsApi";
@@ -51,6 +51,7 @@ function highlightText(text, query) {
 
 export default function CallsPage() {
     const { showAlert } = useAlertContext();
+    const showAlertRef = useRef(showAlert);
     const [calls, setCalls] = useState([]);
     const [loading, setLoading] = useState(true);
     const [phoneQuery, setPhoneQuery] = useState("");
@@ -58,6 +59,10 @@ export default function CallsPage() {
     const [outcome, setOutcome] = useState("all");
     const [selectedId, setSelectedId] = useState(null);
     const [inTranscript, setInTranscript] = useState("");
+
+    useEffect(() => {
+        showAlertRef.current = showAlert;
+    }, [showAlert]);
 
     useEffect(() => {
         let cancelled = false;
@@ -72,7 +77,7 @@ export default function CallsPage() {
             } catch (err) {
                 if (!cancelled) {
                     setCalls([]);
-                    showAlert?.(err?.message || "Не удалось загрузить звонки", "error");
+                    showAlertRef.current?.(err?.message || "Не удалось загрузить звонки", "error");
                 }
             } finally {
                 if (!cancelled) setLoading(false);

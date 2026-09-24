@@ -393,6 +393,14 @@ export default function RequestsPage() {
                                     <span className="text-slate-400 font-medium">Кандидатов нужно:</span>
                                     <span className="text-slate-900 font-bold">{request.headcount} чел.</span>
                                 </div>
+                                {request.slot_summary && (
+                                    <div className="grid grid-cols-2 gap-1 rounded-lg border border-slate-100 bg-white p-2 text-xs">
+                                        <span className="text-slate-500">Свободно: <b className="text-slate-900">{request.slot_summary.free || 0}</b></span>
+                                        <span className="text-slate-500">Запланировано: <b className="text-blue-700">{request.slot_summary.planned || 0}</b></span>
+                                        <span className="text-slate-500">На адаптации: <b className="text-amber-700">{request.slot_summary.adapting || 0}</b></span>
+                                        <span className="text-slate-500">Закрыто: <b className="text-emerald-700">{request.slot_summary.closed || 0}</b></span>
+                                    </div>
+                                )}
                                 <div className="flex justify-between items-center px-1">
                                     <span className="text-slate-400">Зарплата:</span>
                                     <span className="text-slate-900 font-medium">{formatSalary(request.salary_from, request.salary_to)}</span>

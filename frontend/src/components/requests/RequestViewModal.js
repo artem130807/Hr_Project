@@ -61,6 +61,20 @@ const ListBlock = ({ label, items }) => {
   );
 };
 
+const SLOT_LABELS = {
+  free: "Свободно",
+  planned: "Запланировано",
+  adapting: "На адаптации",
+  closed: "Закрыто",
+};
+
+const SLOT_STYLES = {
+  free: "bg-slate-100 text-slate-700",
+  planned: "bg-blue-100 text-blue-800",
+  adapting: "bg-amber-100 text-amber-800",
+  closed: "bg-emerald-100 text-emerald-800",
+};
+
 export default function RequestViewModal({
   request,
   onClose,
@@ -107,6 +121,7 @@ export default function RequestViewModal({
               {statusLabel}
             </span>
           </div>
+
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-gray-600 text-2xl leading-none"
@@ -127,6 +142,28 @@ export default function RequestViewModal({
               <InfoRow label="Дата выхода" value={formatDateRu(request.planned_start_date)} />
               <InfoRow label="Срочность" value={request.urgency} />
               <InfoRow label="Зарплата" value={formatSalary(request.salary_from, request.salary_to)} />
+            </div>
+          </div>
+
+          <div className="pt-4 border-t">
+            <h3 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Места заявки</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-3">
+              {Object.entries(SLOT_LABELS).map(([key, label]) => (
+                <div key={key} className={`rounded-lg px-3 py-2 ${SLOT_STYLES[key]}`}>
+                  <div className="text-xs">{label}</div>
+                  <div className="text-lg font-bold">{request.slot_summary?.[key] || 0}</div>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-2">
+              {(request.slots || []).map((slot) => (
+                <div key={slot.id} className="flex items-center justify-between rounded-lg border px-3 py-2 text-sm">
+                  <span>Место №{slot.ordinal}{slot.cycle > 1 ? ` · цикл ${slot.cycle}` : ""}</span>
+                  <span className={`rounded-full px-2 py-1 text-xs font-medium ${SLOT_STYLES[slot.status] || SLOT_STYLES.free}`}>
+                    {SLOT_LABELS[slot.status] || slot.status}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
