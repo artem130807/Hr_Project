@@ -68,7 +68,7 @@ export default function AutoNegotiationsToggle({className = "", onChanged}) {
                 disabled={loading || saving}
                 className={`
                     relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent
-                    transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 ${enabled ? "bg-indigo-600" : "bg-slate-400"}
+                    transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-[#4f46e5] focus:ring-offset-2 ${enabled ? "bg-[#4f46e5]" : "bg-[#666666]"}
                     ${loading || saving ? "opacity-60 cursor-not-allowed" : ""}
                 `}
                 aria-pressed={enabled}
@@ -78,8 +78,8 @@ export default function AutoNegotiationsToggle({className = "", onChanged}) {
                 `}/>
             </button>
 
-            {loading && <span className="text-xs text-slate-500">Загрузка...</span>}
-            {saving && <span className="text-xs text-slate-500">Сохранение</span>}
+            {loading && <span className="text-xs text-[#666666]">Загрузка...</span>}
+            {saving && <span className="text-xs text-[#666666]">Сохранение</span>}
             {error && <span className="text-xs text-red-500">{error}</span>}
         </div>
     )

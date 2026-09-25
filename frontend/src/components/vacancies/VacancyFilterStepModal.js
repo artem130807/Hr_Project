@@ -342,7 +342,7 @@ export default function VacancyFilterStepModal({
                                     type="button"
                                     data-testid="filter-edit-selected"
                                     onClick={() => openEditFor(selected)}
-                                    className="mt-2 text-sm text-[#8a7020] hover:underline font-medium"
+                                    className="mt-2 text-sm text-[#3730a3] hover:underline font-medium"
                                 >
                                     Редактировать этот фильтр
                                 </button>

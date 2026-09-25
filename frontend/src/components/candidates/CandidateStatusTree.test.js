@@ -13,10 +13,10 @@ describe("CandidateStatusTree", () => {
             />
         );
 
-        expect(screen.getByText("Полный пакет документов")).toBeInTheDocument();
+        expect(screen.getByText("Все документы")).toBeInTheDocument();
         expect(screen.queryByText("Full documents")).not.toBeInTheDocument();
         expect(screen.getByText("Тест отправлен").closest("button")).toBeDisabled();
-        fireEvent.click(screen.getByText("Полный пакет документов"));
+        fireEvent.click(screen.getByText("Все документы"));
         expect(onSelect).toHaveBeenCalledWith("Full documents");
     });
 });

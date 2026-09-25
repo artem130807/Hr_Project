@@ -50,11 +50,11 @@ function MessageList({ messages, pending, error, onSelect }) {
                             onClick={() => onSelect(message)}
                             aria-label={unread ? `${message.content || "Уведомление"}, непрочитано` : undefined}
                             className={`w-full flex items-start gap-3 px-5 py-4 text-left transition-colors ${
-                                unread ? "bg-indigo-50/80" : "bg-white"
+                                unread ? "bg-indigo-50/70" : "bg-white"
                             } ${clickable ? "hover:bg-slate-50 cursor-pointer" : "cursor-default"}`}
                         >
                             <span
-                                className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${unread ? "bg-indigo-600" : "bg-transparent"}`}
+                                className={`mt-1.5 w-2 h-2 rounded-full shrink-0 ${unread ? "bg-[#4f46e5]" : "bg-transparent"}`}
                                 aria-hidden="true"
                             />
                             <span className="min-w-0 flex-1">
@@ -233,7 +233,7 @@ export default function NotificationsPage() {
                             onClick={() => setSection(id)}
                             className={`px-4 py-2 rounded-full border text-sm font-medium transition-colors ${
                                 section === id
-                                    ? "bg-indigo-600 border-indigo-600 text-white"
+                                    ? "bg-[#4f46e5] border-[#4f46e5] text-white"
                                     : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
                             }`}
                         >
@@ -245,7 +245,7 @@ export default function NotificationsPage() {
                 <section className="bg-white border border-slate-200/80 rounded-2xl shadow-sm overflow-hidden">
                     <div className="min-h-[58px] flex items-center gap-3 px-5 py-3 border-b border-slate-100 bg-slate-50/70">
                         {channelId ? (
-                            <button type="button" onClick={() => setSection(SECTIONS.CHANNELS)} className="text-sm font-semibold text-indigo-700 hover:text-indigo-800">
+                            <button type="button" onClick={() => setSection(SECTIONS.CHANNELS)} className="text-sm font-semibold text-indigo-700 hover:text-indigo-900">
                                 ← К каналам
                             </button>
                         ) : null}
@@ -262,7 +262,7 @@ export default function NotificationsPage() {
                                     disabled={togglePending}
                                     checked={findSettingsForChannel(settings, selectedChannel.id)?.is_send_push_message !== false}
                                     onChange={(event) => toggleChannel(selectedChannel, event.target.checked)}
-                                    className="accent-yellow-500"
+                                    className="accent-indigo-600"
                                 />
                                 уведомления
                             </label>

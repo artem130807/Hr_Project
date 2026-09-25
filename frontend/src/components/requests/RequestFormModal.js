@@ -788,7 +788,7 @@ export default function RequestFormModal({ onClose, onSubmit, user = {}, isLoadi
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="px-5 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-60"
+                  className="px-5 py-2.5 rounded-xl bg-[#4f46e5] text-white text-sm font-semibold hover:bg-[#4338ca] disabled:opacity-60"
                 >
                   {isLoading ? "Создание…" : "Создать заявку"}
                 </button>

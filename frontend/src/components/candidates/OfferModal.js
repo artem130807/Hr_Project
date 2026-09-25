@@ -64,7 +64,7 @@ export default function OfferModal({ open, defaultText = "", onClose, onSubmit }
                         </button>
                         <button
                             type="button"
-                            className="px-4 py-2 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 text-sm font-semibold disabled:opacity-60"
+                            className="px-4 py-2 rounded-xl bg-[#4f46e5] text-white hover:bg-[#4338ca] text-sm font-semibold disabled:opacity-60"
                             onClick={handleSubmit}
                             disabled={loading || !text.trim()}
                         >

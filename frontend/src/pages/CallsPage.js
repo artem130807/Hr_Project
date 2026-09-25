@@ -271,7 +271,7 @@ export default function CallsPage() {
                                             {formatRuPhone(selected.phone)}
                                             <button
                                                 type="button"
-                                                className="ml-2 text-[11px] font-semibold uppercase tracking-wide text-[#9a7d18] hover:underline"
+                                                className="ml-2 text-[11px] font-semibold uppercase tracking-wide text-[#3730a3] hover:underline"
                                                 onClick={() => navigator.clipboard?.writeText(formatRuPhone(selected.phone))}
                                             >
                                                 копировать

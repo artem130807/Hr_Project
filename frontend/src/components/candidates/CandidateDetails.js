@@ -182,7 +182,7 @@ export default function CandidateDetails({ candidate, onChange, isArchiveView = 
                             type="button"
                             onClick={() => setOfferModal(true)}
                             disabled={candidate.offer_sent === true}
-                            className="px-3.5 py-2 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
+                            className="px-3.5 py-2 rounded-xl bg-[#4f46e5] text-white text-sm font-semibold hover:bg-[#4338ca] disabled:opacity-50 disabled:cursor-not-allowed shadow-sm"
                         >
                             {candidate.offer_sent ? "Оффер отправлен" : "Направить оффер"}
                         </button>

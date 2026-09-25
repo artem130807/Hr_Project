@@ -135,7 +135,7 @@ export default function CandidatesFilters({
                                 недоступен.{" "}
                                 <Link
                                     to="/vacancies?tab=hh"
-                                    className="text-[#a88a1f] underline hover:text-slate-900"
+                                    className="text-[#3730a3] underline hover:text-slate-900"
                                 >
                                     Вакансии → С HH.ru → Импортировать
                                 </Link>
@@ -146,7 +146,7 @@ export default function CandidatesFilters({
                                 или импортируйте на{" "}
                                 <Link
                                     to="/vacancies?tab=hh"
-                                    className="text-[#a88a1f] underline hover:text-slate-900"
+                                    className="text-[#3730a3] underline hover:text-slate-900"
                                 >
                                     Вакансии → С HH.ru
                                 </Link>

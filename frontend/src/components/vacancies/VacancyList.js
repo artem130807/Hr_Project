@@ -289,7 +289,7 @@ export default function VacancyList({
                                         type="button"
                                         onClick={() => handleSyncToHH(vacancy)}
                                         disabled={syncing[vacancy.id]}
-                                        className="flex-1 bg-indigo-600 text-white px-3 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="flex-1 bg-[#4f46e5] text-white px-3 py-2 rounded-xl hover:bg-[#4338ca] transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {syncing[vacancy.id] ? "Обновляем..." : "Обновить на HH"}
                                     </button>
@@ -308,7 +308,7 @@ export default function VacancyList({
                                     type="button"
                                     onClick={() => handlePublishToHH(vacancy)}
                                     disabled={publishing[vacancy.id]}
-                                    className="flex-1 bg-indigo-600 text-white px-3 py-2 rounded-xl hover:bg-indigo-700 transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                                    className="flex-1 bg-[#4f46e5] text-white px-3 py-2 rounded-xl hover:bg-[#4338ca] transition-colors text-sm font-medium shadow-sm disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
                                     {publishing[vacancy.id] ? "Публикуем..." : "На HH.ru"}
                                 </button>

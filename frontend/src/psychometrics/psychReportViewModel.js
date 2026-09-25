@@ -25,7 +25,7 @@ export const BEHAVIOR_META = {
         name: "стабильность",
         tip: "Стабильность темпа, терпение и поддержка.",
         headerTip: "Отражает спокойный темп, терпение и ориентацию на поддержку.",
-        color: "var(--yellow, #e9ae28)",
+        color: "var(--yellow, #4f46e5)",
     },
     C: {
         name: "точность",

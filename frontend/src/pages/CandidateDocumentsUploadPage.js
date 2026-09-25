@@ -187,7 +187,7 @@ export default function CandidateDocumentsUploadPage() {
                     {entries.map((item) => <div key={item.file_id} className="flex items-center justify-between rounded-xl border p-3"><div><b>{CANDIDATE_DOCUMENT_LABELS[item.kind] || item.kind}</b><p className="text-xs text-slate-500">{item.filename} · {(item.size / 1024).toFixed(0)} КБ</p></div><button disabled={sending} type="button" className="text-sm text-red-700" onClick={() => removeFile(item)}>Удалить</button></div>)}
                 </div>
                 <p className="mt-4 text-xs text-slate-500">Файлы сохраняются в защищённом черновике на 72 часа и восстановятся после повторного открытия страницы. Для одного документа можно приложить несколько страниц. Загружено: {(totalBytes / 1024 / 1024).toFixed(2)} МБ.</p>
-                <button type="button" disabled={!entries.length || sending} onClick={submit} className="mt-5 w-full rounded-xl bg-indigo-600 text-white px-4 py-3 font-semibold hover:bg-indigo-700 disabled:opacity-50">{sending ? "Отправляем…" : "Отправить пакет документов"}</button>
+                <button type="button" disabled={!entries.length || sending} onClick={submit} className="mt-5 w-full rounded-xl bg-[#4f46e5] px-4 py-3 font-semibold disabled:opacity-50">{sending ? "Отправляем…" : "Отправить пакет документов"}</button>
             </div>
         </main>
     );

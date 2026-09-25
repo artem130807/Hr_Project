@@ -258,7 +258,7 @@ export default function PsychResultsPage() {
                                             <button
                                                 type="button"
                                                 onClick={() => openDetail(row)}
-                                                className="text-sm font-medium text-[#a88b20] hover:underline"
+                                                className="text-sm font-medium text-[#3730a3] hover:underline"
                                             >
                                                 {row._kind === "psychological" ? "Подробнее" : "Открыть"}
                                             </button>

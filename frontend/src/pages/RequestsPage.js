@@ -436,7 +436,7 @@ export default function RequestsPage() {
                             </div>
 
                             <div className="pt-4 border-t border-slate-100 flex justify-end items-center">
-                                <span className="text-sm font-medium text-[#4f46e5] flex items-center gap-1 group-hover:text-[#b8952b] transition-colors">
+                                <span className="text-sm font-medium text-[#4f46e5] flex items-center gap-1 group-hover:text-[#4338ca] transition-colors">
                                     Подробнее
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                 </span>

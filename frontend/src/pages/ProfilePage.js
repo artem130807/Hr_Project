@@ -133,7 +133,7 @@ export default function ProfilePage() {
                             {!isEditing && (
                                 <button 
                                     onClick={() => setIsEditing(true)}
-                                    className="text-sm font-semibold text-[#4f46e5] hover:text-[#b8942b] transition-colors"
+                                    className="text-sm font-semibold text-[#4f46e5] hover:text-[#4338ca] transition-colors"
                                 >
                                     Изменить
                                 </button>
@@ -187,7 +187,7 @@ export default function ProfilePage() {
                                     <button 
                                         type="submit"
                                         disabled={saving}
-                                        className="flex-1 bg-[#4f46e5] text-white px-4 py-2.5 rounded-xl hover:bg-[#b8942b] transition-colors shadow-sm text-sm font-medium disabled:opacity-70"
+                                        className="flex-1 bg-[#4f46e5] text-white px-4 py-2.5 rounded-xl hover:bg-[#4338ca] transition-colors shadow-sm text-sm font-medium disabled:opacity-70"
                                     >
                                         {saving ? 'Сохранение...' : 'Сохранить'}
                                     </button>

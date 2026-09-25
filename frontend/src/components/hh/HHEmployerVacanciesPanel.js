@@ -262,7 +262,7 @@ export default function HHEmployerVacanciesPanel({
                                     <button
                                         type="button"
                                         onClick={() => setNegotiationsFor({ id: v.hh_vacancy_id, name: v.name })}
-                                        className="flex-1 bg-indigo-600 text-white text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-indigo-700 transition-colors shadow-sm flex justify-center items-center gap-2"
+                                        className="flex-1 bg-[#4f46e5] text-white text-sm font-medium px-4 py-2.5 rounded-xl hover:bg-[#4338ca] transition-colors shadow-sm flex justify-center items-center gap-2"
                                     >
                                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>
                                         Отклики

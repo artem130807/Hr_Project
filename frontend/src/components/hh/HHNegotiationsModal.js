@@ -331,7 +331,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                         type="button"
                         onClick={handleBulkImport}
                         disabled={bulkImporting || visibleItems.length === 0}
-                        className="text-sm px-4 py-2.5 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 font-medium disabled:opacity-50"
+                        className="text-sm px-4 py-2.5 bg-[#4f46e5] text-white rounded-xl hover:bg-[#4338ca] font-medium disabled:opacity-50"
                     >
                         {bulkImporting ? "Импорт..." : `Импорт всех (${visibleItems.length})`}
                     </button>
@@ -444,7 +444,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                                                         type="button"
                                                         disabled={importing[item.id]}
                                                         onClick={() => handleImport(item)}
-                                                        className="text-sm bg-indigo-600 text-white px-3 py-2 rounded-xl hover:bg-indigo-700 disabled:opacity-50 font-medium"
+                                                        className="text-sm bg-[#4f46e5] text-white px-3 py-2 rounded-xl hover:bg-[#4338ca] disabled:opacity-50 font-medium"
                                                     >
                                                         {importing[item.id] ? "..." : "В кандидаты"}
                                                     </button>
@@ -570,7 +570,7 @@ export default function HHNegotiationsModal({ hhVacancyId, vacancyName, onClose 
                                                 type="button"
                                                 onClick={() => handleImport({ id: selectedId, already_candidate: detail.already_candidate })}
                                                 disabled={importing[selectedId]}
-                                                className="text-sm px-4 py-2.5 rounded-xl bg-indigo-600 text-white hover:bg-indigo-700 font-medium disabled:opacity-50"
+                                                className="text-sm px-4 py-2.5 rounded-xl bg-[#4f46e5] text-white hover:bg-[#4338ca] font-medium disabled:opacity-50"
                                             >
                                                 {importing[selectedId] ? "Импорт..." : "В кандидаты"}
                                             </button>

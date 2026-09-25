@@ -20,8 +20,6 @@ async function handlePush(event) {
     const tag = payload.id != null ? `hr-msg-${payload.id}` : "hr-msg";
     await self.registration.showNotification("HR Platform", {
         body: text,
-        icon: "/favicon.ico",
-        badge: "/favicon.ico",
         tag,
         renotify: true,
         silent: hasFocused,

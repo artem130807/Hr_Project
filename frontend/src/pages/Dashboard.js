@@ -15,7 +15,7 @@ const GROUP_LABEL = {
 
 const PRIORITY_BORDER = {
     high: "border-red-500",
-    medium: "border-indigo-500",
+    medium: "border-[#4f46e5]",
     low: "border-blue-400",
 };
 
@@ -113,7 +113,7 @@ export default function Dashboard() {
             </div>
 
             <div className="mb-8 flex flex-wrap gap-3">
-                <Link to="/requests" className="px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 transition-colors rounded-xl text-white text-sm font-medium shadow-sm">
+                <Link to="/requests" className="px-5 py-2.5 bg-[#4f46e5] hover:bg-[#4338ca] transition-colors rounded-xl text-white text-sm font-medium shadow-sm">
                     Создать / открыть заявки
                 </Link>
                 <Link to="/candidates" className="px-5 py-2.5 bg-white border border-slate-200 hover:border-slate-300 hover:bg-slate-50 transition-colors rounded-xl text-slate-700 text-sm font-medium shadow-sm">
@@ -170,7 +170,7 @@ export default function Dashboard() {
                                                     {task.meta && <span className="inline-block px-2 py-0.5 bg-slate-100 text-slate-600 rounded text-xs font-medium mb-2">{task.meta}</span>}
                                                 </div>
                                             </div>
-                                            <Link to={task.href} className="text-sm font-medium text-[#4f46e5] hover:text-[#b8952b] transition-colors flex items-center gap-1">
+                                            <Link to={task.href} className="text-sm font-medium text-[#4f46e5] hover:text-[#4338ca] transition-colors flex items-center gap-1">
                                                 Перейти
                                                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
                                             </Link>

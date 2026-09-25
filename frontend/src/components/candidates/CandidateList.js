@@ -333,7 +333,7 @@ export default function CandidateList({
                                         type="button"
                                         onClick={() => handleCommentSave(candidate.id)}
                                         disabled={commentSaving}
-                                        className="px-3 py-1.5 text-xs font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors shadow-sm disabled:opacity-50"
+                                        className="px-3 py-1.5 text-xs font-medium text-white bg-[#4f46e5] hover:bg-[#4338ca] rounded-lg transition-colors shadow-sm disabled:opacity-50"
                                     >
                                         {commentSaving ? "..." : "Сохранить"}
                                     </button>

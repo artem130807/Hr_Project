@@ -43,7 +43,7 @@ describe('candidateStatuses', () => {
         expect(statusLabel('собес')).toBe('Собеседование');
         expect(statusLabel('подумать')).toBe('Подумать');
         expect(statusLabel('отказ')).toBe('Отказ');
-        expect(statusLabel('Full documents')).toBe('Полный пакет документов');
+        expect(statusLabel('Full documents')).toBe('Все документы');
     });
 
     it('separates stage, state and next action', () => {

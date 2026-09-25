@@ -69,7 +69,7 @@ export default function NegotiationResumeModal({
                                         type="button"
                                         onClick={onImport}
                                         disabled={importing}
-                                        className="px-3.5 py-2 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-50 shadow-sm"
+                                        className="px-3.5 py-2 rounded-xl bg-[#4f46e5] text-white text-sm font-semibold hover:bg-[#4338ca] disabled:opacity-50 shadow-sm"
                                     >
                                         {importing ? "Импорт..." : "В кандидаты"}
                                     </button>

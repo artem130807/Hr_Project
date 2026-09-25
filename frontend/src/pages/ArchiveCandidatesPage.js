@@ -126,7 +126,7 @@ export default function ArchiveCandidatesPage() {
   if (loading) {
     return (
       <MainLayout>
-        <p className="text-slate-500">Загрузка…</p>
+        <p className="text-[#666666]">Загрузка…</p>
       </MainLayout>
     );
   }

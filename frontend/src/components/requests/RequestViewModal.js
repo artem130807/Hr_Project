@@ -379,7 +379,7 @@ export default function RequestViewModal({
                   type="button"
                   onClick={() => onPublishHH(request.id)}
                   disabled={isPublishingHH}
-                  className="px-4 py-2 text-sm bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 disabled:opacity-50 font-medium"
+                  className="px-4 py-2 text-sm bg-[#4f46e5] text-white rounded-lg hover:bg-[#4338ca] disabled:opacity-50 font-medium"
                 >
                   {isPublishingHH ? "Публикация..." : "Опубликовать на HH.ru"}
                 </button>

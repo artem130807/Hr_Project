@@ -452,7 +452,7 @@ const TestForm = ({ initialData , onClose, onTestAdded, isAiTest = false }) => {
                                     <button
                                         type="button"
                                         onClick={handleAddQuestion}
-                                        className="text-[#4f46e5] hover:text-[#b8952b] text-sm font-semibold transition-colors"
+                                        className="text-[#4f46e5] hover:text-[#4338ca] text-sm font-semibold transition-colors"
                                     >
                                         + Добавить вопрос
                                     </button>

@@ -849,7 +849,7 @@ export default function AdaptationPage() {
                                                 <button type="button" className="mt-3 text-sm font-medium text-slate-700 underline" onClick={() => setEditingTemplate("")}>Готово</button>
                                             </div> : <div className="mt-3 rounded-xl bg-slate-50 p-3">
                                                 <p className="whitespace-pre-wrap text-sm text-slate-700">{notificationPreview(item.text)}</p>
-                                                <button type="button" className="mt-2 text-xs font-medium text-[#9b7d20] hover:underline" onClick={() => setEditingTemplate(key)}>Изменить текст</button>
+                                                <button type="button" className="mt-2 text-xs font-medium text-[#3730a3] hover:underline" onClick={() => setEditingTemplate(key)}>Изменить текст</button>
                                             </div>}
                                         </article>;
                                     })}

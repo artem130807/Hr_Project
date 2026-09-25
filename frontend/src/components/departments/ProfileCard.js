@@ -19,7 +19,7 @@ export default function ProfileCard({ profile, onDelete, onEdit }) {
             <p><strong>KPI:</strong> {profile.kpi || "—"}</p>
 
             <div className="mt-4 flex space-x-2">
-                <button onClick={onEdit} className="bg-indigo-600 text-white px-3 py-1 rounded">Редактировать</button>
+                <button onClick={onEdit} className="bg-indigo-600 text-white px-3 py-1 rounded hover:bg-indigo-700">Редактировать</button>
                 <button onClick={() => setShowConfirm(true)} className="bg-red-500 text-white px-3 py-1 rounded">Удалить</button>
             </div>
 

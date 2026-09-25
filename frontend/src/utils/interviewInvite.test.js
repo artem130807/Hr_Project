@@ -55,7 +55,7 @@ describe("interviewInvite helpers", () => {
             timeValue: "16:00",
         });
         expect(text).toContain("Артём Валерьевич, здравствуйте!");
-        expect(text).toContain("Напоминаем о собеседовании.");
+        expect(text).toContain("Напоминаем о собеседовании в ALT.");
         expect(text).toContain("9 июля в 16:00");
     });
 });

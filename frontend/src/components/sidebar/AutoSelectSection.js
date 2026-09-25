@@ -99,7 +99,7 @@ export default function AutoSelectSection() {
     };
 
     return (
-        <div className="mt-2 rounded-2xl bg-white text-slate-800 p-3">
+        <div className="mt-4">
             <h3 className="text-sm font-semibold mb-2">Автоподбор</h3>
 
             <div className="mb-3 space-y-2">
@@ -117,7 +117,7 @@ export default function AutoSelectSection() {
                 </select>
                 <button
                     type="button"
-                    className="w-full px-2 py-1 bg-indigo-600 text-white rounded text-xs font-medium disabled:opacity-50"
+                    className="w-full px-2 py-1 bg-[#4f46e5] text-white rounded text-xs font-medium disabled:opacity-50"
                     onClick={handleActivate}
                     disabled={!!activatingId || !selectedToActivate}
                 >
@@ -156,7 +156,7 @@ export default function AutoSelectSection() {
                                             disabled={savingLimit[search.vacancy_id]}
                                         />
                                         <button
-                                            className="px-2 py-1 bg-indigo-600 text-white rounded text-xs"
+                                            className="px-2 py-1 bg-yellow-400 rounded text-xs"
                                             onClick={() => handleSaveLimit(search.vacancy_id)}
                                             disabled={savingLimit[search.vacancy_id]}
                                         >
