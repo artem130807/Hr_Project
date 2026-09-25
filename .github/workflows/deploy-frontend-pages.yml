@@ -39,11 +39,20 @@ jobs:
         working-directory: frontend
         run: npm test -- --watchAll=false --runInBand
 
+      - name: Resolve GitHub Pages base path
+        shell: bash
+        run: |
+          repository_name="${GITHUB_REPOSITORY#*/}"
+          if [[ "$repository_name" == "${GITHUB_REPOSITORY_OWNER}.github.io" ]]; then
+            echo "PUBLIC_URL=" >> "$GITHUB_ENV"
+          else
+            echo "PUBLIC_URL=/$repository_name" >> "$GITHUB_ENV"
+          fi
+
       - name: Build GitHub Pages site
         working-directory: frontend
         env:
           CI: "true"
-          PUBLIC_URL: /Hr_Project
           REACT_APP_FORCE_REMOTE_API: "true"
           REACT_APP_API_URL: https://hr-platform.alt-cargo.tw1.ru
           REACT_APP_HH_API_URL: https://hr-platform.alt-cargo.tw1.ru

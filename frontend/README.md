@@ -2,7 +2,7 @@
 
 React-приложение подготовлено для публикации как GitHub Pages project site:
 
-`https://artem130807.github.io/Hr_Project/`
+`https://artem130807.github.io/Hr_Project.github.io/`
 
 ## Локальный запуск
 
@@ -20,7 +20,7 @@ Workflow `.github/workflows/deploy-frontend-pages.yml` при каждом из�
 
 1. устанавливает зависимости через `npm ci`;
 2. запускает тесты;
-3. собирает приложение с базовым путём `/Hr_Project`;
+3. автоматически определяет базовый путь по имени GitHub-репозитория;
 4. направляет API-запросы на `https://hr-platform.alt-cargo.tw1.ru`;
 5. публикует папку `frontend/build` в GitHub Pages.
 
