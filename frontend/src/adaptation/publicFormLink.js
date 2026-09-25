@@ -1,3 +1,5 @@
+import { appAbsoluteUrl } from "../utils/publicUrl";
+
 export function publicAdaptationFormUrl(token, providedUrl = "") {
     const path = `/adaptation/forms/${encodeURIComponent(String(token || ""))}`;
     if (providedUrl) {
@@ -7,5 +9,5 @@ export function publicAdaptationFormUrl(token, providedUrl = "") {
             // Fall back to the current HR frontend if backend configuration is stale.
         }
     }
-    return new URL(path, window.location.origin).toString();
+    return appAbsoluteUrl(path);
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { listPsychInstruments } from "../../services/psychTestApi";
 import { psychPublicTakePath } from "../../config/navConfig";
 import { useAlertContext } from "../../context/AlertContext";
+import { appAbsoluteUrl } from "../../utils/publicUrl";
 
 export default function PsychInstrumentCatalog() {
     const { showAlert } = useAlertContext();
@@ -34,7 +35,7 @@ export default function PsychInstrumentCatalog() {
 
     const copyLink = async (instrumentId) => {
         const path = psychPublicTakePath(instrumentId);
-        const url = `${window.location.origin}${path}`;
+        const url = appAbsoluteUrl(path);
         try {
             await navigator.clipboard.writeText(url);
             setCopiedId(instrumentId);

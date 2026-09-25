@@ -1,4 +1,5 @@
 import { API_URL, API_PREFIX } from "../config/api";
+import { appPath } from "./publicUrl";
 import {
     getAccessToken,
     getRefreshToken,
@@ -62,8 +63,9 @@ function handleUnauthorized() {
     } catch {
         /* ignore */
     }
-    if (window.location.pathname !== "/") {
-        window.location.replace("/");
+    const loginPath = appPath("/");
+    if (window.location.pathname !== loginPath) {
+        window.location.replace(loginPath);
     }
 }
 

@@ -11,6 +11,7 @@ import {
     isAccessTokenExpired,
 } from "../utils/tokenStorage";
 import { unsyncWebPushSubscription } from "../services/webPushClient";
+import { appPath } from "../utils/publicUrl";
 
 const AuthContext = createContext(null);
 
@@ -169,7 +170,7 @@ export function AuthProvider({ children }) {
         setUser(null);
         clearSession();
         resetAuthClearedFlag();
-        window.location.replace("/");
+        window.location.replace(appPath("/"));
     };
 
     return (

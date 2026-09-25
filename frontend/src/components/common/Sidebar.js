@@ -7,6 +7,7 @@ import {checkHHAuth, getHHAuthLink} from "../../services/hhAuthApi";
 import AutoSelectSection from "../sidebar/AutoSelectSection";
 import {menuItemsForRole, isNavGroup, defaultPathForRole} from "../../config/navConfig";
 import * as Icons from "./Icons";
+import { appPath } from "../../utils/publicUrl";
 
 export default function Sidebar() {
     const {user, logout} = useAuth();
@@ -218,7 +219,7 @@ export default function Sidebar() {
 
             <div className="p-4 border-t border-slate-100 bg-slate-50">
                 <div 
-                    onClick={() => window.location.href = '/profile'}
+                    onClick={() => window.location.href = appPath('/profile')}
                     className="flex items-center gap-3 px-2 mb-4 cursor-pointer hover:bg-slate-200/50 p-2 rounded-xl transition-colors group"
                     title="Перейти в профиль"
                 >

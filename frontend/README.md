@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# HR Platform frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React-приложение подготовлено для публикации как GitHub Pages project site:
 
-## Available Scripts
+`https://artem130807.github.io/Hr_Project/`
 
-In the project directory, you can run:
+## Локальный запуск
 
-### `npm start`
+```bash
+npm ci
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+В режиме разработки запросы `/v1` проксируются на API из `src/setupProxy.js`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Автоматическая публикация
 
-### `npm test`
+Workflow `.github/workflows/deploy-frontend-pages.yml` при каждом изменении
+`frontend` в ветке `main`:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. устанавливает зависимости через `npm ci`;
+2. запускает тесты;
+3. собирает приложение с базовым путём `/Hr_Project`;
+4. направляет API-запросы на `https://hr-platform.alt-cargo.tw1.ru`;
+5. публикует папку `frontend/build` в GitHub Pages.
 
-### `npm run build`
+Перед первым деплоем откройте в репозитории **Settings → Pages** и выберите
+**Source: GitHub Actions**. Затем отправьте изменения в ветку `main` либо вручную
+запустите workflow **Deploy frontend to GitHub Pages** во вкладке Actions.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Прямые ссылки на внутренние страницы поддерживаются через `build/404.html`.
+Файл `.nojekyll` отключает обработку собранных файлов Jekyll.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Важное условие для API
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+GitHub Pages размещает только статический frontend и не может проксировать `/v1`.
+Поэтому production-сборка обращается к API напрямую. Бэкенд должен разрешать CORS
+для origin `https://artem130807.github.io`. Если origin не разрешён, интерфейс
+откроется, но браузер заблокирует запросы к API.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Сервис уведомлений также требует отдельного публичного HTTPS/WSS-адреса. Когда он
+будет доступен, добавьте в шаг сборки workflow переменные
+`REACT_APP_MESSAGE_SERVICE_URL` и `REACT_APP_MESSAGE_SERVICE_WS_URL`.

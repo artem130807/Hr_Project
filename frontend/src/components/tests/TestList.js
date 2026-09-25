@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { professionalPublicTakePath } from "../../config/navConfig";
 import { useAlertContext } from "../../context/AlertContext";
+import { appAbsoluteUrl } from "../../utils/publicUrl";
 
 export default function TestList({tests, onTestDeleted, onTestClick, onTestEdit, psychCatalog}) {
     const { showAlert } = useAlertContext();
@@ -10,7 +11,7 @@ export default function TestList({tests, onTestDeleted, onTestClick, onTestEdit,
 
     const copyLink = async (testId) => {
         const path = professionalPublicTakePath(testId);
-        const url = `${window.location.origin}${path}`;
+        const url = appAbsoluteUrl(path);
         try {
             await navigator.clipboard.writeText(url);
             setCopiedId(testId);

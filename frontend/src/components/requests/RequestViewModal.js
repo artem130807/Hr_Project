@@ -1,6 +1,7 @@
 import { HIRING_REQUEST_STATUS } from "../../services/hiringRequestsApi";
 import { useAuth } from "../../context/AuthContext";
 import { formatDateRu } from "../../utils/dateFormat";
+import { appPath } from "../../utils/publicUrl";
 
 /**
  * Модальное окно просмотра заявки на подбор персонала
@@ -333,11 +334,11 @@ export default function RequestViewModal({
                 <p>
                   {request.linked_vacancy_id ? (
                     <a
-                      href={`/vacancies`}
+                      href={appPath("/vacancies")}
                       className="text-[#4f46e5] hover:underline font-medium"
                       onClick={(e) => {
                         e.preventDefault();
-                        window.location.assign(`/vacancies`);
+                        window.location.assign(appPath("/vacancies"));
                       }}
                     >
                       #{request.linked_vacancy_id} — открыть список вакансий

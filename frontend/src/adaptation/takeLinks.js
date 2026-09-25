@@ -1,3 +1,5 @@
+import { appAbsoluteUrl } from "../utils/publicUrl";
+
 export const ADAPTATION_TAKE_STORAGE_KEY = "adaptationTake";
 
 export const TAKE_ROLE_LABELS = {
@@ -13,7 +15,7 @@ export function adaptationFormPath(token) {
 
 export function adaptationFormAbsoluteUrl(token, origin = (typeof window !== "undefined" ? window.location.origin : "")) {
     const path = adaptationFormPath(token);
-    return path ? `${origin}${path}` : "";
+    return path ? appAbsoluteUrl(path, origin) : "";
 }
 
 export function rememberAdaptationTake(payload = {}, storage) {

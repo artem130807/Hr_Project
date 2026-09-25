@@ -13,13 +13,15 @@ import {
     urlBase64ToUint8Array,
     writeStoredVapidKey,
 } from "../utils/webPushLogic";
+import { appPath } from "../utils/publicUrl";
 
 let registrationPromise = null;
 
 export async function registerPushServiceWorker() {
     if (!isWebPushSupported()) return null;
     if (!registrationPromise) {
-        registrationPromise = navigator.serviceWorker.register("/sw.js", { scope: "/" })
+        const scope = appPath("/");
+        registrationPromise = navigator.serviceWorker.register(appPath("/sw.js"), { scope })
             .then(() => navigator.serviceWorker.ready)
             .catch((err) => {
                 registrationPromise = null;

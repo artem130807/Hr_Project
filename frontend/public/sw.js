@@ -46,7 +46,9 @@ function fallbackUrl(payload) {
 
 async function handleNotificationClick(notification) {
     const path = notification?.data?.url || "/notifications";
-    const destination = new URL(path, self.location.origin).href;
+    const destination = /^https?:\/\//i.test(path)
+        ? path
+        : new URL(String(path).replace(/^\/+/, ""), self.registration.scope).href;
     const windows = await clients.matchAll({ type: "window", includeUncontrolled: true });
     for (const client of windows) {
         try { if (new URL(client.url).origin !== self.location.origin) continue; } catch { continue; }
